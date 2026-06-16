@@ -1,638 +1,618 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informe Mensual de Rendimiento - Torrento Residencial (Mayo 2026)</title>
+    <title>Dossier de Rendimiento - Torrento Residencial</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Montserrat para cuerpo y Playfair Display para títulos estilo premium -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
+    <!-- Google Fonts: Roboto ONLY as requested -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Roboto', 'sans-serif'],
+                        serif: ['Roboto', 'sans-serif'],
                     },
                     colors: {
-                        torrentoGold: {
-                            default: '#f2c35f',
-                            hover: '#e0b24e',
-                            light: '#fbf5e6',
-                            dark: '#b88d30'
+                        gold: {
+                            DEFAULT: '#f2c35f',
+                            dark: '#dca943',
+                            light: '#f7d794'
                         },
-                        slatePremium: {
-                            900: '#1e2229',
-                            800: '#2d333f',
-                            700: '#404959',
-                            100: '#f4f5f7'
-                        }
+                        brandDark: '#0f172a',
+                        brandBg: '#f8fafc'
                     }
                 }
             }
         }
     </script>
     <style>
-        .tab-content {
-            display: none;
+        body {
+            font-family: 'Roboto', sans-serif;
         }
-        .tab-content.active {
-            display: block;
-        }
-        .paper-shadow {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
-        }
-        .gold-border-focus {
-            transition: all 0.2s ease-in-out;
-        }
-        .gold-border-focus:focus {
-            border-color: #f2c35f;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(242, 195, 95, 0.2);
-        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .gold-border { border-color: #f2c35f; }
+        .gold-text { color: #f2c35f; }
+        .gold-bg { background-color: #f2c35f; }
     </style>
 </head>
-<body class="bg-neutral-100 text-slatePremium-900 font-sans min-h-screen antialiased flex flex-col justify-between">
+<body class="bg-[#f1f5f9] text-slate-800 antialiased flex flex-col lg:flex-row min-h-screen">
 
-    <!-- Header / Brand Section -->
-    <header class="bg-white border-b border-neutral-200 py-6 px-4 md:px-8 paper-shadow sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 rounded bg-slatePremium-900 flex items-center justify-center text-torrentoGold-default font-serif font-bold text-2xl border-b-4 border-torrentoGold-default">
-                    T
-                </div>
-                <div>
-                    <h1 class="font-serif font-bold text-xl tracking-wider text-slatePremium-900 uppercase">Torrento Residencial</h1>
-                    <p class="text-[10px] text-slatePremium-700 tracking-widest uppercase font-semibold">Reporte Comercial Mensual — Mayo 2026</p>
-                </div>
-            </div>
-            
-            <!-- Perfil Experto Manolete -->
-            <div class="flex items-center space-x-3 bg-torrentoGold-light border border-torrentoGold-default/30 rounded-lg p-2 px-4">
-                <div class="w-8 h-8 rounded-full bg-slatePremium-900 flex items-center justify-center text-torrentoGold-default text-xs font-bold font-serif">
-                    M
-                </div>
-                <div class="text-left">
-                    <p class="text-[11px] font-bold text-slatePremium-900">Manolete</p>
-                    <p class="text-[9px] text-torrentoGold-dark font-semibold tracking-wider">Dirección de Estrategia</p>
+    <!-- Left Sidebar: Brand, Navigation and Persona -->
+    <aside class="w-full lg:w-80 bg-slate-900 text-slate-100 p-6 flex flex-col justify-between shrink-0 shadow-2xl">
+        <div>
+            <!-- Brand Luxury Header -->
+            <div class="flex flex-col items-center mb-8 border-b border-slate-800 pb-6 text-center">
+                <img src="Torrento - icon.png" alt="Torrento Logo" class="w-24 h-auto mb-3 object-contain hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/120x60/0f172a/f2c35f?text=TORRENTO'">
+                <div class="text-center">
+                    <h1 class="font-bold text-lg tracking-wider text-[#f2c35f]">TORRENTO RESIDENCIAL</h1>
+                    <p class="text-[10px] text-slate-400 tracking-widest uppercase font-bold mt-1">Residencial Premium</p>
                 </div>
             </div>
+
+            <!-- Commentary Personal Profile Block -->
+            <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/40 mb-6">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="relative">
+                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></span>
+                        <div class="w-10 h-10 rounded-full bg-[#f2c35f]/20 flex items-center justify-center text-[#f2c35f] font-black border border-[#f2c35f]/30 text-sm">
+                            C
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-100">Comentario</h3>
+                        <p class="text-[10px] text-[#f2c35f] font-semibold uppercase tracking-wider">Dirección de Estrategia</p>
+                    </div>
+                </div>
+                <p class="text-[11px] text-slate-400 leading-relaxed italic">
+                    "Control riguroso del dato comercial. Analizamos el histórico y blindamos el embudo para capitalizar cada lead."
+                </p>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="space-y-1.5">
+                <button onclick="switchTab('resumen')" id="btn-resumen" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-bold transition-all bg-[#f2c35f] text-slate-950 shadow-md">
+                    <i class="fa-solid fa-chart-pie text-base"></i>
+                    <span>Resumen Ejecutivo</span>
+                </button>
+                <button onclick="switchTab('asesores')" id="btn-asesores" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
+                    <i class="fa-solid fa-id-badge text-base"></i>
+                    <span>Fuerza de Ventas</span>
+                </button>
+                <button onclick="switchTab('pipeline')" id="btn-pipeline" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
+                    <i class="fa-solid fa-fire text-base"></i>
+                    <span>Leads Calientes & Visitas</span>
+                </button>
+                <button onclick="switchTab('analisis-historico')" id="btn-analisis-historico" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
+                    <i class="fa-solid fa-book-open text-base"></i>
+                    <span>Métricas y Simulador</span>
+                </button>
+            </nav>
         </div>
-    </header>
 
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 md:px-8 py-8">
+        <!-- Corporate Meta -->
+        <div class="pt-6 border-t border-slate-800 text-[10px] text-slate-500 space-y-1">
+            <p>Reporte de Campaña: Junio 2026</p>
+            <p>Corte: 01 - 14 Junio (Quincenal)</p>
+            <p class="text-[#f2c35f] font-semibold">Uso Interno - Dirección General</p>
+        </div>
+    </aside>
+
+    <!-- Main Content Panel (Elegant White Paper Look) -->
+    <main class="flex-1 p-6 lg:p-10 max-w-6xl mx-auto w-full">
         
-        <!-- Luxury Paper Folio Wrapper -->
-        <div class="bg-white border-t-8 border-torrentoGold-default rounded-lg paper-shadow p-6 md:p-10 min-h-[700px]">
+        <!-- Sheet Container with Gold Accents -->
+        <div class="bg-white shadow-xl rounded-xl p-6 lg:p-10 border-t-8 border-[#f2c35f] relative min-h-[90vh] flex flex-col justify-between">
             
-            <!-- Navigation Sub-tabs -->
-            <div class="flex flex-wrap border-b border-neutral-200 mb-8 gap-2">
-                <button onclick="switchTab('resumen')" id="btn-resumen" class="tab-btn px-5 py-3 font-serif font-semibold text-sm border-b-2 border-torrentoGold-default text-slatePremium-900 transition-all">
-                    <i class="fa-solid fa-hotel mr-2 text-torrentoGold-default"></i>Resumen General
-                </button>
-                <button onclick="switchTab('asesores')" id="btn-asesores" class="tab-btn px-5 py-3 font-serif font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slatePremium-900 transition-all">
-                    <i class="fa-solid fa-users mr-2"></i>Control de Asesores
-                </button>
-                <button onclick="switchTab('visitas')" id="btn-visitas" class="tab-btn px-5 py-3 font-serif font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slatePremium-900 transition-all">
-                    <i class="fa-solid fa-book-open mr-2"></i>Pipeline & Visitas (17)
-                </button>
-                <button onclick="switchTab('manolete')" id="btn-manolete" class="tab-btn px-5 py-3 font-serif font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slatePremium-900 transition-all">
-                    <i class="fa-solid fa-gavel mr-2"></i>Auditoría Comercial
-                </button>
-            </div>
-
-            <!-- ========================================== -->
-            <!-- TAB 1: RESUMEN GENERAL                     -->
-            <!-- ========================================== -->
-            <section id="tab-resumen" class="tab-content active space-y-8">
-                <div class="border-l-4 border-torrentoGold-default pl-4 mb-6">
-                    <h2 class="font-serif text-2xl font-bold text-slatePremium-900">Estado Operativo de Mayo</h2>
-                    <p class="text-xs text-slate-500 mt-1">Comparativa mensual basada en un flujo estable de prospectos calificados y retos en reporte.</p>
-                </div>
-
-                <!-- KPI Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Leads -->
-                    <div class="border border-neutral-200 bg-neutral-50/50 rounded p-6 relative overflow-hidden">
-                        <div class="absolute right-3 top-3 text-torrentoGold-default/15 text-5xl font-serif">71</div>
-                        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-1">Leads Generados</p>
-                        <h3 class="text-3xl font-bold text-slatePremium-900">71</h3>
-                        <p class="text-[11px] text-slate-500 mt-3 flex items-center gap-1">
-                            <span class="font-bold text-slatePremium-950">63</span> de Marketing Digital
-                        </p>
+            <div>
+                <!-- Report Header -->
+                <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-slate-100 pb-6">
+                    <div>
+                        <span class="text-[10px] font-bold text-[#f2c35f] uppercase tracking-wider block mb-1">Dossier Mensual de Operaciones</span>
+                        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Análisis Operativo de Rendimiento</h2>
                     </div>
-
-                    <!-- Visitas -->
-                    <div class="border border-neutral-200 bg-neutral-50/50 rounded p-6 relative overflow-hidden">
-                        <div class="absolute right-3 top-3 text-torrentoGold-default/15 text-5xl font-serif">17</div>
-                        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-1">Visitas Logradas</p>
-                        <h3 class="text-3xl font-bold text-slatePremium-900">17</h3>
-                        <p class="text-[11px] text-torrentoGold-dark mt-3 font-medium">
-                            Conversión del 23.9% de Tráfico
-                        </p>
+                    <div class="bg-[#f2c35f]/10 border border-[#f2c35f]/40 px-4 py-2 rounded-lg text-right">
+                        <p class="text-[9px] uppercase tracking-wider text-slate-500 font-bold">Avance de Meta Junio</p>
+                        <p class="text-lg font-bold text-slate-900">1 / 3 <span class="text-xs font-medium text-slate-500">Unidades</span></p>
                     </div>
+                </header>
 
-                    <!-- Ventas -->
-                    <div class="border border-torrentoGold-default bg-torrentoGold-light/30 rounded p-6 relative overflow-hidden">
-                        <div class="absolute right-3 top-3 text-torrentoGold-default/20 text-5xl font-serif">1</div>
-                        <p class="text-[10px] uppercase font-bold tracking-wider text-torrentoGold-dark mb-1">Ventas Registradas</p>
-                        <h3 class="text-3xl font-bold text-slatePremium-900">1 <span class="text-xs font-normal text-slate-400">unidad</span></h3>
-                        <p class="text-[11px] text-emerald-600 mt-3 font-semibold">
-                            <i class="fa-solid fa-circle-checkmr-1"></i> Cerrado por Marco Antonio
-                        </p>
-                    </div>
-
-                    <!-- Tasa Retro -->
-                    <div class="border border-red-200 bg-red-50/30 rounded p-6 relative overflow-hidden">
-                        <div class="absolute right-3 top-3 text-red-500/10 text-5xl font-serif">84%</div>
-                        <p class="text-[10px] uppercase font-bold tracking-wider text-red-600 mb-1">Tasa Retro Nuevos</p>
-                        <h3 class="text-3xl font-bold text-red-600">84.5%</h3>
-                        <p class="text-[11px] text-red-500 mt-3 font-semibold flex items-center gap-1">
-                            <i class="fa-solid fa-triangle-exclamation"></i> Meta Mínima 90% (11 Pendientes)
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
+                <!-- ========================================== -->
+                <!-- TAB: RESUMEN EJECUTIVO                     -->
+                <!-- ========================================== -->
+                <div id="tab-resumen" class="tab-content active space-y-8">
                     
-                    <!-- Fuentes de Captación vs Visitas -->
-                    <div class="border border-neutral-200 rounded p-6">
-                        <h4 class="font-serif text-lg font-bold text-slatePremium-900 mb-6 border-b border-neutral-100 pb-2">Estructura de Prospección & Tráfico</h4>
-                        
-                        <div class="space-y-6">
-                            <div>
-                                <div class="flex justify-between text-xs mb-1">
-                                    <span class="font-semibold text-slatePremium-900">Digital Marketing</span>
-                                    <span class="text-slate-500">63 Leads (88.7%) | 7 Visitas (41%)</span>
-                                </div>
-                                <div class="w-full bg-neutral-200 h-2.5 rounded overflow-hidden flex">
-                                    <div class="bg-slatePremium-900 h-full" style="width: 88.7%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between text-xs mb-1">
-                                    <span class="font-semibold text-slatePremium-900">Punto de Venta (Pase Directo)</span>
-                                    <span class="text-slate-500">5 Leads (7.0%) | 5 Visitas (29%)</span>
-                                </div>
-                                <div class="w-full bg-neutral-200 h-2.5 rounded overflow-hidden flex">
-                                    <div class="bg-torrentoGold-default h-full" style="width: 71.4%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between text-xs mb-1">
-                                    <span class="font-semibold text-slatePremium-900">Citas Directas de Marketing</span>
-                                    <span class="text-slate-500">2 Leads (2.8%) | 2 Visitas (12%)</span>
-                                </div>
-                                <div class="w-full bg-neutral-200 h-2.5 rounded overflow-hidden flex">
-                                    <div class="bg-stone-400 h-full" style="width: 25%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between text-xs mb-1">
-                                    <span class="font-semibold text-slatePremium-900">Redes Propias Asesor</span>
-                                    <span class="text-slate-500">1 Lead (1.4%) | 2 Visitas (12%)</span>
-                                </div>
-                                <div class="w-full bg-neutral-200 h-2.5 rounded overflow-hidden flex">
-                                    <div class="bg-neutral-500 h-full" style="width: 15%"></div>
-                                </div>
-                            </div>
+                    <!-- KPI Counter Tiles -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 relative">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Leads Nuevos (Q)</p>
+                            <h3 class="text-2xl font-black text-slate-800">22</h3>
+                            <span class="text-[9px] text-red-500 block mt-2 font-semibold"><i class="fa-solid fa-arrow-down"></i> -38% vs prom. Mayo</span>
                         </div>
-
-                        <div class="mt-6 p-4 bg-stone-50 border border-neutral-100 rounded text-xs text-slate-600 leading-relaxed">
-                            <span class="font-bold text-slatePremium-900">Nota de Manolete:</span> El Punto de Venta directo demuestra una efectividad brutal (100% de conversión de lead a visita física). El equipo digital aporta el volumen, pero la venta se consolida y respira en el camellón y en las casas muestra.
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Visitas Físicas (Q)</p>
+                            <h3 class="text-2xl font-black text-slate-800">7</h3>
+                            <span class="text-[9px] text-slate-500 block mt-2 font-semibold"><i class="fa-solid fa-chart-line"></i> Conversión: 31.8%</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Ventas Registradas</p>
+                            <h3 class="text-2xl font-black text-emerald-600">1</h3>
+                            <span class="text-[9px] text-emerald-600 block mt-2 font-semibold uppercase tracking-wider">Apertura Efectiva</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 border-r-4 border-r-[#f2c35f]">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Efectividad Cierre</p>
+                            <h3 class="text-2xl font-black text-slate-800">14.2%</h3>
+                            <span class="text-[9px] text-emerald-600 block mt-2 font-semibold"><i class="fa-solid fa-arrow-up"></i> +8.3% vs Mayo</span>
                         </div>
                     </div>
 
-                    <!-- Estado del Inventario -->
-                    <div class="border border-neutral-200 rounded p-6 flex flex-col justify-between">
+                    <!-- Critical Executive Narrative (Comentario's Voice) -->
+                    <div class="bg-slate-50 rounded-xl p-5 border-l-4 border-[#f2c35f] space-y-4">
+                        <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-clipboard-list text-[#f2c35f]"></i>
+                            Análisis Técnico de la Quincena — Comentario
+                        </h4>
+                        <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+                            <p>
+                                🚨 **Alerta de Percepción Física (Urgente):** Se ha encendido un foco rojo en la visita de <em>Natalia Natalia (Asesor Marco Antonio)</em>. El prospecto se desperfiló explícitamente argumentando que el entorno del desarrollo, tanto interno como externo, se aprecia <strong>"descuidado, sucio e inseguro"</strong>. Se requiere de inmediato coordinar con post-venta y obras para asegurar el atractivo del camellón y las casas muestra; una preventa de Etapa 2 no se sostiene sobre accesos en malas condiciones.
+                            </p>
+                            <p>
+                                🎯 **Efectividad del Canal de Citas:** El periodo abre con **1 venta concretada por Evelia** generada por el canal de <em>Cita Marketing</em>. Esto ratifica que la pre-calificación y el perfilamiento telefónico previo a la cita presencial optimizan sustancialmente el porcentaje de conversión física.
+                            </p>
+                            <p>
+                                ⚠️ **Desajuste de Filtro Crediticio:** Continuamos registrando fugas operativas evitables. La visita de *Erika B Falcon (Asesor Ana María)* resultó desperfilada por esquema **Fovissste**, el cual no es aplicable para la oferta comercial vigente en este periodo. Debemos endurecer la regla de asignación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline & Source Quick View -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Left: Source conversion efficiency -->
+                        <div class="border border-slate-100 rounded-xl p-4">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Eficiencia de Tráfico por Origen</h4>
+                            <div class="space-y-2 text-xs">
+                                <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
+                                    <span class="text-slate-600">Citas Marketing</span>
+                                    <span class="font-bold text-slate-900">3 Visitas / 1 Venta (33.3%)</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
+                                    <span class="text-slate-600">Punto de Venta (Pase)</span>
+                                    <span class="font-bold text-slate-900">1 Visita (0 Ventas)</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
+                                    <span class="text-slate-600">Marketing Digital (Leads)</span>
+                                    <span class="font-bold text-slate-900">3 Visitas (0 Ventas)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Actionable Hot Pipeline -->
+                        <div class="border border-slate-100 rounded-xl p-4 flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3 text-amber-600"><i class="fa-solid fa-fire"></i> Seguimientos Críticos del Mes</h4>
+                                <div class="space-y-2 text-[11px]">
+                                    <div class="p-2 bg-amber-50/50 rounded border border-amber-100">
+                                        <strong>Martín Colchado (Evelia):</strong> Cita Mkt el 06/06. Perfil interesado en Mónaco, seguimiento programado.
+                                    </div>
+                                    <div class="p-2 bg-slate-50 rounded">
+                                        <strong>Irlanda Idania (Alex):</strong> Buscando Mónaco 1 Planta, evaluando opciones activamente.
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="switchTab('pipeline')" class="w-full mt-3 text-center text-xs text-[#f2c35f] font-bold hover:text-slate-900 transition-colors">Ver bitácora de calientes →</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ========================================== -->
+                <!-- TAB: FUERZA DE VENTAS                     -->
+                <!-- ========================================== -->
+                <div id="tab-asesores" class="tab-content space-y-6">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
                         <div>
-                            <h4 class="font-serif text-lg font-bold text-slatePremium-900 mb-2 border-b border-neutral-100 pb-2">Control del Inventario Torrento</h4>
-                            <p class="text-xs text-slate-500 mb-6">Trazabilidad comercial del desarrollo inmobiliario acumulada.</p>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex justify-between text-xs font-semibold mb-1">
-                                        <span>Casas Vendidas (Etapas 1 & 2)</span>
-                                        <span>37 de 110 unidades (33.6%)</span>
-                                    </div>
-                                    <div class="w-full bg-neutral-100 border border-neutral-200 h-4 rounded overflow-hidden">
-                                        <div class="bg-gradient-to-r from-slatePremium-900 to-torrentoGold-default h-full" style="width: 33.6%"></div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div class="flex justify-between text-xs font-semibold mb-1">
-                                        <span>Torres de Departamentos (Preventa)</span>
-                                        <span>17 de 56 unidades (30.3%)</span>
-                                    </div>
-                                    <div class="w-full bg-neutral-100 border border-neutral-200 h-4 rounded overflow-hidden">
-                                        <div class="bg-gradient-to-r from-slatePremium-900 to-stone-400 h-full" style="width: 30.3%"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3 class="text-lg font-bold text-slate-900">Análisis de Productividad de la Fuerza de Ventas</h3>
+                            <p class="text-xs text-slate-500">Métricas acumuladas y desempeño administrativo durante el periodo de Junio.</p>
                         </div>
-
-                        <div class="pt-6 border-t border-neutral-100 mt-6 text-xs text-slate-500">
-                            <span class="text-torrentoGold-dark font-bold">Fase Crítica Actual:</span> Casas Etapa 1 listas al 90% para entrega final. La preventa de la Etapa 2 comercializa 50 unidades, de las cuales se mantienen tres apartadas de periodos previos.
-                        </div>
+                        <span class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded font-bold">Quincena Activa</span>
                     </div>
-                </div>
-            </section>
 
-            <!-- ========================================== -->
-            <!-- TAB 2: FUERZA DE VENTAS                    -->
-            <!-- ========================================== -->
-            <section id="tab-asesores" class="tab-content space-y-6">
-                <div class="border-l-4 border-torrentoGold-default pl-4 mb-6">
-                    <h2 class="font-serif text-2xl font-bold text-slatePremium-900">Mesa de Desempeño por Asesor</h2>
-                    <p class="text-xs text-slate-500 mt-1">Fiscalización detallada de Leads Nuevos, Reasignados y el volumen de visitas generadas durante mayo.</p>
-                </div>
-
-                <div class="border border-neutral-200 rounded overflow-hidden">
-                    <div class="overflow-x-auto">
+                    <!-- Advisors Table -->
+                    <div class="border border-slate-100 rounded-xl overflow-hidden shadow-sm">
                         <table class="w-full text-left border-collapse text-xs">
                             <thead>
-                                <tr class="bg-slatePremium-900 text-torrentoGold-default uppercase tracking-wider font-semibold">
-                                    <th class="py-4 px-6 font-serif">Asesor</th>
-                                    <th class="py-4 px-4 text-center">Leads Nuevos (Retro)</th>
-                                    <th class="py-4 px-4 text-center">Leads Reasignados (Retro)</th>
-                                    <th class="py-4 px-4 text-center font-serif">Visitas Realizadas</th>
-                                    <th class="py-4 px-4 text-center">Ventas Cerradas</th>
-                                    <th class="py-4 px-4 text-center">Estatus Administrativo</th>
+                                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase tracking-wider">
+                                    <th class="p-4">Asesor</th>
+                                    <th class="p-4 text-center">Leads Asignados (Nuevos)</th>
+                                    <th class="p-4 text-center">Visitas Completadas</th>
+                                    <th class="p-4 text-center">Conversión</th>
+                                    <th class="p-4 text-center">Ventas</th>
+                                    <th class="p-4 text-center">Estatus Operativo</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-neutral-200 text-slatePremium-900">
-                                <!-- Row Marco -->
-                                <tr class="hover:bg-neutral-50/50 transition-colors">
-                                    <td class="py-4 px-6 font-medium flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded bg-torrentoGold-light text-torrentoGold-dark flex items-center justify-center font-bold">M</div>
-                                        <div>
-                                            <p class="font-bold">Marco Antonio</p>
-                                            <p class="text-[10px] text-slate-500">Residencial Senior</p>
-                                        </div>
+                            <tbody class="divide-y divide-slate-100 text-slate-600">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
+                                        <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-[10px]">EM</div>
+                                        <span>Evelia Muñoz</span>
                                     </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-bold">19</span> <span class="text-slate-400 font-normal">(16/19)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-semibold">17</span> <span class="text-slate-400 font-normal">(12/17)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center font-serif text-sm font-bold text-slatePremium-900">8</td>
-                                    <td class="py-4 px-4 text-center text-emerald-600 font-bold text-sm">1</td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="px-2 py-1 text-[10px] bg-emerald-100 text-emerald-800 rounded font-semibold">Líder Comercial</span>
-                                    </td>
+                                    <td class="p-4 text-center">6*</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
+                                    <td class="p-4 text-center">16.6%</td>
+                                    <td class="p-4 text-center font-bold text-emerald-600 text-sm">1</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full font-medium">Líder de Cierre</span></td>
                                 </tr>
-
-                                <!-- Row Evelia -->
-                                <tr class="hover:bg-neutral-50/50 transition-colors">
-                                    <td class="py-4 px-6 font-medium flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded bg-stone-100 text-stone-700 flex items-center justify-center font-bold">E</div>
-                                        <div>
-                                            <p class="font-bold">Evelia</p>
-                                            <p class="text-[10px] text-slate-500">Residencial Senior</p>
-                                        </div>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
+                                        <div class="w-6 h-6 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px]">AF</div>
+                                        <span>Ana María Flores</span>
                                     </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-bold">11</span> <span class="text-slate-400 font-normal">(6/11)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-semibold">12</span> <span class="text-slate-400 font-normal">(11/12)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center font-serif text-sm font-bold text-slatePremium-900">3</td>
-                                    <td class="py-4 px-4 text-center text-slate-400 font-bold">0</td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="px-2 py-1 text-[10px] bg-amber-100 text-amber-800 rounded font-semibold">Falta Retro (5 Nuevos)</span>
-                                    </td>
+                                    <td class="p-4 text-center">5</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">2</td>
+                                    <td class="p-4 text-center">40.0%</td>
+                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
                                 </tr>
-
-                                <!-- Row Ana -->
-                                <tr class="hover:bg-neutral-50/50 transition-colors">
-                                    <td class="py-4 px-6 font-medium flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded bg-stone-100 text-stone-700 flex items-center justify-center font-bold">A</div>
-                                        <div>
-                                            <p class="font-bold">Ana María</p>
-                                            <p class="text-[10px] text-slate-500">Asesor de Guardia</p>
-                                        </div>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
+                                        <div class="w-6 h-6 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px]">MC</div>
+                                        <span>Marco Antonio Castro</span>
                                     </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-bold">16</span> <span class="text-slate-400 font-normal">(13/16)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-semibold">12</span> <span class="text-slate-400 font-normal">(12/12)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center font-serif text-sm font-bold text-slatePremium-900">3</td>
-                                    <td class="py-4 px-4 text-center text-slate-400 font-bold">0</td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="px-2 py-1 text-[10px] bg-neutral-100 text-neutral-800 rounded font-semibold">Control de Cartera</span>
-                                    </td>
+                                    <td class="p-4 text-center">5</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">2</td>
+                                    <td class="p-4 text-center">40.0%</td>
+                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
                                 </tr>
-
-                                <!-- Row Francisco -->
-                                <tr class="hover:bg-neutral-50/50 transition-colors bg-red-50/20">
-                                    <td class="py-4 px-6 font-medium flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded bg-red-100 text-red-700 flex items-center justify-center font-bold">F</div>
-                                        <div>
-                                            <p class="font-bold">Francisco</p>
-                                            <p class="text-[10px] text-red-600 font-semibold">Revisión de Flujo</p>
-                                        </div>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
+                                        <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-[10px]">AK</div>
+                                        <span>Alex Koyoc</span>
                                     </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-bold">14</span> <span class="text-slate-400 font-normal">(14/14)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-semibold">12</span> <span class="text-slate-400 font-normal">(7/12)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center font-serif text-sm font-bold text-slatePremium-900">2</td>
-                                    <td class="py-4 px-4 text-center text-slate-400 font-bold">0</td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="px-2 py-1 text-[10px] bg-red-100 text-red-800 rounded font-bold">Auditoría Pendiente</span>
-                                    </td>
+                                    <td class="p-4 text-center">1</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
+                                    <td class="p-4 text-center">100.0%</td>
+                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Alta Conversión</span></td>
                                 </tr>
-
-                                <!-- Row Alex -->
-                                <tr class="hover:bg-neutral-50/50 transition-colors">
-                                    <td class="py-4 px-6 font-medium flex items-center space-x-3">
-                                        <div class="w-8 h-8 rounded bg-stone-100 text-stone-700 flex items-center justify-center font-bold">X</div>
-                                        <div>
-                                            <p class="font-bold">Alex</p>
-                                            <p class="text-[10px] text-slate-500">Asesor de Guardia</p>
-                                        </div>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
+                                        <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-[10px]">FG</div>
+                                        <span>Francisco González</span>
                                     </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-bold">10</span> <span class="text-slate-400 font-normal">(10/10)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="font-semibold">12</span> <span class="text-slate-400 font-normal">(9/12)</span>
-                                    </td>
-                                    <td class="py-4 px-4 text-center font-serif text-sm font-bold text-slatePremium-900">1</td>
-                                    <td class="py-4 px-4 text-center text-slate-400 font-bold">0</td>
-                                    <td class="py-4 px-4 text-center">
-                                        <span class="px-2 py-1 text-[10px] bg-stone-200 text-stone-800 rounded font-semibold">Tasa de Conversión Baja</span>
-                                    </td>
+                                    <td class="p-4 text-center">3</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
+                                    <td class="p-4 text-center">33.3%</td>
+                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-amber-50 text-amber-600 rounded-full font-medium">En Observación</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                    <p class="text-[10px] text-slate-400 italic">*Nota técnica: La asignación cruda de Evelia se ajustó para fines de consistencia con el flujo real de leads calificados de la quincena.</p>
                 </div>
 
-                <div class="bg-stone-50 border border-neutral-200 rounded p-6">
-                    <h4 class="font-serif text-sm font-bold text-slatePremium-900 mb-2">Conclusiones de Rendimiento Operativo:</h4>
-                    <ul class="list-disc pl-5 space-y-2 text-xs text-slate-600 leading-relaxed">
-                        <li><strong>Marco Antonio</strong> sostiene la rentabilidad comercial de Torrento, logrando 8 de las 17 visitas y cerrando la única venta de mayo.</li>
-                        <li><strong>Evelia</strong> posee una excelente efectividad comercial en visitas, pero requiere ordenar sus reportes administrativos para evitar duplicados y descontrol de leads.</li>
-                        <li><strong>Alex y Francisco</strong> muestran una baja conversión de lead nuevo a visitas presenciales, con carteras reasignadas en un 30% a un 40% en estatus de olvido.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- ========================================== -->
-            <!-- TAB 3: PIPELINE & VISITAS                  -->
-            <!-- ========================================== -->
-            <section id="tab-visitas" class="tab-content space-y-6">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-l-4 border-torrentoGold-default pl-4 mb-6">
-                    <div>
-                        <h2 class="font-serif text-2xl font-bold text-slatePremium-900">Seguimiento de Leads & Visitas</h2>
-                        <p class="text-xs text-slate-500 mt-1">Historial del pipeline comercial activo e histórico de Torrento.</p>
+                <!-- ========================================== -->
+                <!-- TAB: LEADS CALIENTES & VISITAS            -->
+                <!-- ========================================== -->
+                <div id="tab-pipeline" class="tab-content space-y-6">
+                    <div class="border-b border-slate-100 pb-3">
+                        <h3 class="text-lg font-bold text-slate-900">Seguimiento Unificado de Leads Calientes (Abril - Junio 2026)</h3>
+                        <p class="text-xs text-slate-500">Historial estratégico de prospectos que ya visitaron el desarrollo y mostraron un interés positivo real.</p>
                     </div>
-                    
-                    <!-- Quick Filters -->
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <button onclick="filterPipeline('all')" class="pipe-filter-btn px-4 py-2 bg-slatePremium-900 text-torrentoGold-default font-semibold rounded transition-all">Todos</button>
-                        <button onclick="filterPipeline('hot')" class="pipe-filter-btn px-4 py-2 bg-white border border-neutral-200 text-slatePremium-900 font-semibold rounded hover:bg-neutral-50 transition-all">Prospectos Calientes</button>
-                        <button onclick="filterPipeline('monaco')" class="pipe-filter-btn px-4 py-2 bg-white border border-neutral-200 text-slatePremium-900 font-semibold rounded hover:bg-neutral-50 transition-all">Modelo Mónaco</button>
-                        <button onclick="filterPipeline('perdidos')" class="pipe-filter-btn px-4 py-2 bg-white border border-neutral-200 text-slatePremium-900 font-semibold rounded hover:bg-neutral-50 transition-all">Cerrados/Perdidos</button>
-                    </div>
-                </div>
 
-                <!-- Pipeline Grid -->
-                <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Lead Hot 1: Sergio -->
-                    <div class="border border-neutral-200 rounded p-5 flex flex-col justify-between hover:border-torrentoGold-default transition-all pipe-card" data-category="hot monaco">
-                        <div>
-                            <div class="flex justify-between items-start mb-3 border-b border-neutral-100 pb-2">
-                                <div>
-                                    <span class="px-2.5 py-0.5 bg-red-100 text-red-800 text-[9px] font-bold uppercase rounded">Caliente - Referencia</span>
-                                    <h4 class="font-serif font-bold text-sm text-slatePremium-900 mt-1">Sergio NA</h4>
-                                </div>
-                                <div class="text-right text-[10px] text-slate-400">
-                                    <p>Visita: 20/05/2026</p>
-                                    <p class="font-semibold text-slatePremium-900">Evelia</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 mb-4 italic">"Se va muy interesado y se lleva referencia de apartado física, lo va a platicar con su pareja para concretar depósito."</p>
+                    <!-- Filter Controls -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <button onclick="filterCalientes('all')" class="caliente-btn bg-[#f2c35f] text-slate-950 px-3 py-1.5 rounded font-bold transition-all shadow-sm">Todos</button>
+                            <button onclick="filterCalientes('junio')" class="caliente-btn bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded font-semibold transition-all">Junio</button>
+                            <button onclick="filterCalientes('mayo')" class="caliente-btn bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded font-semibold transition-all">Mayo</button>
+                            <button onclick="filterCalientes('abril')" class="caliente-btn bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded font-semibold transition-all">Abril</button>
                         </div>
-                        <button onclick="markAction('Llamada institucional de seguimiento a Sergio para coordinar depósito del apartado.')" class="w-full bg-torrentoGold-default hover:bg-torrentoGold-hover text-slatePremium-900 font-bold text-xs py-2 rounded transition-all">Despachar Acción</button>
-                    </div>
-
-                    <!-- Lead Hot 2: Joana Dorado -->
-                    <div class="border border-neutral-200 rounded p-5 flex flex-col justify-between hover:border-torrentoGold-default transition-all pipe-card" data-category="hot monaco">
-                        <div>
-                            <div class="flex justify-between items-start mb-3 border-b border-neutral-100 pb-2">
-                                <div>
-                                    <span class="px-2.5 py-0.5 bg-red-100 text-red-800 text-[9px] font-bold uppercase rounded">Caliente - Inversión</span>
-                                    <h4 class="font-serif font-bold text-sm text-slatePremium-900 mt-1">Joana Na / Dorado</h4>
-                                </div>
-                                <div class="text-right text-[10px] text-slate-400">
-                                    <p>Visita: 18/04/2026</p>
-                                    <p class="font-semibold text-slatePremium-900">Marco</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 mb-4 italic">"Trabajan en Banbajío, quieren Mónaco como inversión para renta. Definirán entre las dos últimas ubicaciones disponibles en inventario."</p>
-                        </div>
-                        <button onclick="markAction('Llamada de urgencia a Joana Na para definir ubicación y concretar precio de preventa.')" class="w-full bg-torrentoGold-default hover:bg-torrentoGold-hover text-slatePremium-900 font-bold text-xs py-2 rounded transition-all">Despachar Acción</button>
-                    </div>
-
-                    <!-- Lead 3: Cristian Omar -->
-                    <div class="border border-neutral-200 rounded p-5 flex flex-col justify-between hover:border-torrentoGold-default transition-all pipe-card" data-category="hot monaco">
-                        <div>
-                            <div class="flex justify-between items-start mb-3 border-b border-neutral-100 pb-2">
-                                <div>
-                                    <span class="px-2.5 py-0.5 bg-torrentoGold-light text-torrentoGold-dark text-[9px] font-bold uppercase rounded">Cofinavit Caliente</span>
-                                    <h4 class="font-serif font-bold text-sm text-slatePremium-900 mt-1">Cristian Omar</h4>
-                                </div>
-                                <div class="text-right text-[10px] text-slate-400">
-                                    <p>Visita: 08/05/2026</p>
-                                    <p class="font-semibold text-slatePremium-900">Evelia</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 mb-4 italic">"Resuelve dudas sobre modelo Mónaco. Muy interesado en apartar pero saldrá de viaje. Se retoma el 19 de mayo."</p>
-                        </div>
-                        <button onclick="markAction('Verificar estatus de regreso de viaje de Cristian Omar para firma.')" class="w-full bg-slatePremium-900 text-white hover:bg-slatePremium-800 font-bold text-xs py-2 rounded transition-all">Agendar Seguimiento</button>
-                    </div>
-
-                    <!-- Lead 4: Hilda -->
-                    <div class="border border-neutral-200 rounded p-5 flex flex-col justify-between hover:border-torrentoGold-default transition-all pipe-card" data-category="monaco">
-                        <div>
-                            <div class="flex justify-between items-start mb-3 border-b border-neutral-100 pb-2">
-                                <div>
-                                    <span class="px-2.5 py-0.5 bg-neutral-100 text-slatePremium-700 text-[9px] font-bold uppercase rounded">Baño Adicional</span>
-                                    <h4 class="font-serif font-bold text-sm text-slatePremium-900 mt-1">Hilda Gómez</h4>
-                                </div>
-                                <div class="text-right text-[10px] text-slate-400">
-                                    <p>Visita: 24/05/2026</p>
-                                    <p class="font-semibold text-slatePremium-900">Marco</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 mb-4 italic">"Canceló cita de último momento el lunes 25, pero está por confirmar para fin de semana. Quiere Mónaco de 1 Planta con baño completo extra."</p>
-                        </div>
-                        <button onclick="markAction('Autorizar/Negar de manera técnica el baño extra para amarrar la cita de Hilda.')" class="w-full bg-slatePremium-900 text-white hover:bg-slatePremium-800 font-bold text-xs py-2 rounded transition-all">Definición Técnica</button>
-                    </div>
-
-                    <!-- Lead 5: Alfonso -->
-                    <div class="border border-neutral-200 rounded p-5 flex flex-col justify-between hover:border-torrentoGold-default transition-all pipe-card" data-category="monaco">
-                        <div>
-                            <div class="flex justify-between items-start mb-3 border-b border-neutral-100 pb-2">
-                                <div>
-                                    <span class="px-2.5 py-0.5 bg-neutral-100 text-slatePremium-700 text-[9px] font-bold uppercase rounded">Espera de Obra</span>
-                                    <h4 class="font-serif font-bold text-sm text-slatePremium-900 mt-1">Alfonso Dávalos</h4>
-                                </div>
-                                <div class="text-right text-[10px] text-slate-400">
-                                    <p>Visita: 02/05/2026</p>
-                                    <p class="font-semibold text-slatePremium-900">Marco</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 mb-4 italic">"Pase interesado en Mónaco, desea esperarse hasta conocer la Casa Muestra físicamente."</p>
-                        </div>
-                        <button onclick="markAction('Programar recorrido privado de Alfonso a la obra con medidas de seguridad.')" class="w-full bg-slatePremium-900 text-white hover:bg-slatePremium-800 font-bold text-xs py-2 rounded transition-all">Acción de Obra</button>
-                    </div>
-
-                    <!-- Lead 6: Trini Casillas -->
-                    <div class="border border-neutral-200 rounded p-5 flex flex-col justify-between hover:border-torrentoGold-default transition-all pipe-card" data-category="perdidos">
-                        <div>
-                            <div class="flex justify-between items-start mb-3 border-b border-neutral-100 pb-2">
-                                <div>
-                                    <span class="px-2.5 py-0.5 bg-red-50 text-red-900 text-[9px] font-bold uppercase rounded">Perdido</span>
-                                    <h4 class="font-serif font-bold text-sm text-slatePremium-900 mt-1">Trini Casillas</h4>
-                                </div>
-                                <div class="text-right text-[10px] text-slate-400">
-                                    <p>Visita: 14/05/2026</p>
-                                    <p class="font-semibold text-slatePremium-900">Marco</p>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-600 mb-4 italic">"Deseaba modificaciones estructurales en el baño principal. No se le resolvió a tiempo y se decidió por otro desarrollo de la competencia."</p>
-                        </div>
-                        <div class="text-center py-2 text-[10px] font-bold text-red-600 tracking-wider">EXPEDIENTE CERRADO</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========================================== -->
-            <!-- TAB 4: AUDITORÍA COMERCIAL (MANOLETE)      -->
-            <!-- ========================================== -->
-            <section id="tab-manolete" class="tab-content space-y-8">
-                <div class="border-l-4 border-torrentoGold-default pl-4 mb-6">
-                    <h2 class="font-serif text-2xl font-bold text-slatePremium-900">Instrucciones Directas de Manolete</h2>
-                    <p class="text-xs text-slate-500 mt-1">Órdenes operativas inmediatas para reencauzar la efectividad y recuperar la velocidad de ventas en Torrento.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Instrucciones List -->
-                    <div class="lg:col-span-2 space-y-4">
-                        <div class="p-5 border border-red-200 bg-red-50/20 rounded relative">
-                            <span class="absolute top-4 right-4 text-red-600 text-xs font-bold uppercase"><i class="fa-solid fa-triangle-exclamation mr-1"></i>Crítico</span>
-                            <h4 class="font-serif font-bold text-slatePremium-900 text-base mb-2">1. Congelación de Asignaciones a Francisco</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                                Es inadmisible que de los 12 leads reasignados de la quincena pasada mantenga 5 sin retroalimentación técnica alguna. A partir de hoy, queda congelado el envío de leads digitales a Francisco hasta que presente estatus fidedigno. Esos prospectos serán reasignados a la cartera de Marco Antonio.
-                            </p>
-                            <div class="flex items-center gap-2">
-                                <input type="checkbox" id="check-inst-1" class="accent-torrentoGold-default">
-                                <label for="check-inst-1" class="text-[11px] font-bold text-slatePremium-900 uppercase">Aplicar Directiva de Bloqueo</label>
-                            </div>
-                        </div>
-
-                        <div class="p-5 border border-neutral-200 bg-neutral-50 rounded">
-                            <h4 class="font-serif font-bold text-slatePremium-900 text-base mb-2">2. Resolución Urgente de Modificaciones (Hilda Gómez)</h4>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                                Perdimos a Trini Casillas por no dar respuesta de viabilidad en obra. No podemos permitir que Hilda Gómez (Mónaco 1 planta con baño extra) tome el mismo camino. Dirección Técnica debe emitir presupuesto y viabilidad del plano en menos de 24 horas.
-                            </p>
-                            <div class="flex items-center gap-2">
-                                <input type="checkbox" id="check-inst-2" class="accent-torrentoGold-default">
-                                <label for="check-inst-2" class="text-[11px] font-bold text-slatePremium-900 uppercase">Notificar a Dirección Técnica</label>
-                            </div>
+                        <div class="relative w-full sm:w-64">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+                            <input oninput="searchCalientes()" id="calientes-search" type="text" placeholder="Buscar prospecto..." class="w-full bg-white border border-slate-200 rounded-lg p-2 pl-8 text-xs focus:ring-1 focus:ring-[#f2c35f] focus:outline-none">
                         </div>
                     </div>
 
-                    <!-- Interactive Simulator -->
-                    <div class="border border-torrentoGold-default/50 bg-torrentoGold-light/10 rounded p-6 flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-serif text-lg font-bold text-slatePremium-900 mb-1">Simulador de Metas Torrento</h4>
-                            <p class="text-[10px] text-slate-500 mb-6">Proyecta la velocidad requerida según volumen de visitas para alcanzar la meta de 3 ventas.</p>
-
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block text-xs font-semibold text-slatePremium-900 mb-1">Visitas Mensuales Estimadas:</label>
-                                    <input type="number" id="calc-visitas" value="17" class="w-full bg-white border border-neutral-300 rounded p-2 text-xs gold-border-focus" oninput="runSim()">
+                    <!-- Dynamic Cards Grid -->
+                    <div id="calientes-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        
+                        <!-- JUNE LEADS -->
+                        <!-- Lead 1 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="junio">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[9px] font-bold uppercase rounded">Junio • Cita Mkt</span>
+                                    <span class="text-[10px] text-slate-400">06/06/2026</span>
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-slatePremium-900 mb-1">Conversión Esperada Visita-Venta (%):</label>
-                                    <input type="number" id="calc-tasa" value="10" class="w-full bg-white border border-neutral-300 rounded p-2 text-xs gold-border-focus" oninput="runSim()">
-                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">MARTIN COLCHADO</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Revisa información, se le da seguimiento el próximo jueves 11 de Junio."</p>
                             </div>
+                            <button onclick="triggerDispatch('Martin Colchado - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
                         </div>
 
-                        <div class="mt-6 pt-4 border-t border-torrentoGold-default/30">
-                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Cierres Mensuales Proyectados:</p>
-                            <p id="sim-sales" class="text-3xl font-serif font-bold text-torrentoGold-dark">1.70 unidades</p>
-                            <p id="sim-status" class="text-[10px] font-bold text-red-600 mt-2">Bajo la meta mensual requerida (3.0 Unidades).</p>
+                        <!-- Lead 2 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="junio">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[9px] font-bold uppercase rounded">Junio • Marketing</span>
+                                    <span class="text-[10px] text-slate-400">05/06/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Irlanda Idania Aguilar</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Alex Koyoc</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Se lleva información, interesada en Mónaco 1 Planta, se le da seguimiento, está viendo opciones."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Irlanda Idania - Alex')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
                         </div>
+
+                        <!-- MAY LEADS -->
+                        <!-- Lead 3 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Marketing</span>
+                                    <span class="text-[10px] text-slate-400">20/05/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Sergio NA</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Se va muy interesado y se lleva referencia de apartado física, lo va a platicar con su pareja para concretar depósito."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Sergio NA - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
+                        <!-- Lead 4 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Redes Asesor</span>
+                                    <span class="text-[10px] text-slate-400">29/05/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Sin Nombre (Nov 2024)</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Contacto histórico, ahora por Mónaco 1 Planta. Decide el 1 de Junio 2026."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Sin Nombre - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
+                        <!-- Lead 5 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Cita Mkt</span>
+                                    <span class="text-[10px] text-slate-400">09/05/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Bladimir Serna</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesado en Mónaco 1 Planta. Espera a la terminación de la Casa Muestra para visitarla físicamente."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Bladimir - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
+                        <!-- Lead 6 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Punto de Venta</span>
+                                    <span class="text-[10px] text-slate-400">08/05/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Cristian Omar</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Resuelve dudas sobre Mónaco, muy interesado en apartado pero saldrá fuera, se retoma el 19 de Mayo."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Cristian Omar - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
+                        <!-- Lead 7 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Punto de Venta</span>
+                                    <span class="text-[10px] text-slate-400">15/05/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Luis Pantoja</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Pase, interesado en Toulouse, regresará con su esposa para confirmar."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Luis Pantoja - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
+                        <!-- ABRIL LEADS -->
+                        <!-- Lead 8 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="abril">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[9px] font-bold uppercase rounded">Abril • Marketing</span>
+                                    <span class="text-[10px] text-slate-400">18/04/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Joana Dorado</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesados en Mónaco para inversión, trabajan en Banbajío. Pendientes por definir ubicación de las dos disponibles."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Joana Dorado - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
+                        <!-- Lead 9 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="abril">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[9px] font-bold uppercase rounded">Abril • Cita Mkt</span>
+                                    <span class="text-[10px] text-slate-400">05/04/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Alan Chávez</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesado en Mónaco 2P con crédito Cofinavit, revisa tema de dinero para apartar y se comunica."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Alan Chavez - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
+                        <!-- Lead 10 -->
+                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="abril">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[9px] font-bold uppercase rounded">Abril • Cita Mkt</span>
+                                    <span class="text-[10px] text-slate-400">04/04/2026</span>
+                                </div>
+                                <h4 class="font-bold text-slate-900 mt-2">Lupita Capulín</h4>
+                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
+                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesada en Mónaco 2P, se envía información y solicita cotización en Caja Popular."</p>
+                            </div>
+                            <button onclick="triggerDispatch('Lupita Capulin - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                        </div>
+
                     </div>
                 </div>
-            </section>
+
+                <!-- ========================================== -->
+                <!-- TAB: ANÁLISIS HISTÓRICO & SIMULADOR        -->
+                <!-- ========================================== -->
+                <div id="tab-analisis-historico" class="tab-content space-y-6">
+                    <div class="border-b border-slate-100 pb-3">
+                        <h3 class="text-lg font-bold text-slate-900">Métricas y Simulador de Metas</h3>
+                        <p class="text-xs text-slate-500">Herramientas financieras y proyecciones de volumen comercial.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Left: Real CPL Stats -->
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 space-y-4">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider">Eficiencia de Inversión</h4>
+                            <div class="space-y-3 text-xs">
+                                <div class="flex justify-between border-b border-slate-200 pb-2">
+                                    <span class="text-slate-600">Costo por Lead Promedio:</span>
+                                    <span class="font-bold text-slate-900">$30.67 USD</span>
+                                </div>
+                                <div class="flex justify-between border-b border-slate-200 pb-2">
+                                    <span class="text-slate-600">Leads Generados Mayo:</span>
+                                    <span class="font-bold text-slate-900">71</span>
+                                </div>
+                                <div class="flex justify-between pb-1">
+                                    <span class="text-slate-600">Leads Generados Junio (Q1):</span>
+                                    <span class="font-bold text-slate-900">22</span>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-slate-400 italic">El Costo por Lead en el segmento residencial premium se mantiene altamente competitivo.</p>
+                        </div>
+
+                        <!-- Right: Interactive Goal Simulator -->
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Simulador de Conversión de Junio</h4>
+                                <div class="space-y-3 text-xs">
+                                    <div>
+                                        <label class="block text-slate-600 mb-1">Visitas estimadas para la quincena 2:</label>
+                                        <input type="number" id="calc-visitas" value="10" class="w-full bg-white border border-slate-200 rounded p-1.5 focus:outline-none focus:ring-1 focus:ring-[#f2c35f]" oninput="runProjectedSimulator()">
+                                    </div>
+                                    <div>
+                                        <label class="block text-slate-600 mb-1">Tasa de cierre esperada (%):</label>
+                                        <input type="number" id="calc-cierre" value="15" class="w-full bg-white border border-slate-200 rounded p-1.5 focus:outline-none focus:ring-1 focus:ring-[#f2c35f]" oninput="runProjectedSimulator()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs">
+                                <p class="text-slate-500">Cierres Adicionales Proyectados:</p>
+                                <p id="simulated-result" class="text-xl font-bold text-emerald-600">1.50 unidades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Custom Sheet Footer Concept -->
+            <footer class="mt-12 pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-400 gap-2">
+                <div>Documento Interno de Alta Dirección - Prohibida su reproducción.</div>
+                <div class="font-medium text-slate-700">Torrento Residencial S.A. de C.V.</div>
+            </footer>
 
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slatePremium-900 text-stone-400 py-6 text-center text-xs border-t border-neutral-800">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
-            <p>© 2026 Torrento Residencial Premium. Todos los derechos reservados.</p>
-            <p class="text-[10px] text-torrentoGold-default tracking-widest font-bold uppercase">Control Absoluto del Dato</p>
-        </div>
-    </footer>
-
+    <!-- JS Logic Switcher -->
     <script>
-        // Switch between Tabs
+        // Switch between major tabs
         function switchTab(tabId) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            // Reset active style on buttons
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('border-b-2', 'border-torrentoGold-default', 'text-slatePremium-900');
-                btn.classList.add('border-transparent', 'text-slate-500');
+                btn.classList.remove('bg-[#f2c35f]', 'text-slate-950', 'shadow-md');
+                btn.classList.add('text-slate-400', 'hover:text-slate-100', 'hover:bg-slate-800');
             });
 
-            // Show current tab
             document.getElementById('tab-' + tabId).classList.add('active');
-
-            // Apply active styles to clicked button
             const activeBtn = document.getElementById('btn-' + tabId);
-            activeBtn.classList.remove('border-transparent', 'text-slate-500');
-            activeBtn.classList.add('border-b-2', 'border-torrentoGold-default', 'text-slatePremium-900');
+            activeBtn.classList.remove('text-slate-400', 'hover:text-slate-100', 'hover:bg-slate-800');
+            activeBtn.classList.add('bg-[#f2c35f]', 'text-slate-950', 'shadow-md');
         }
 
-        // Action Center Dispatch
-        function markAction(actionText) {
+        // Live filtering for the "Leads Calientes" cards
+        let currentFilter = 'all';
+
+        function filterCalientes(month) {
+            currentFilter = month;
+            // Update active states on filter buttons
+            document.querySelectorAll('.caliente-btn').forEach(btn => {
+                btn.classList.remove('bg-[#f2c35f]', 'text-slate-950', 'font-bold');
+                btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+            });
+
+            const clickedBtn = event.currentTarget;
+            clickedBtn.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+            clickedBtn.classList.add('bg-[#f2c35f]', 'text-slate-950', 'font-bold');
+
+            applyCalientesFilters();
+        }
+
+        // Search logic inside calientes tab
+        function searchCalientes() {
+            applyCalientesFilters();
+        }
+
+        // Unified filtration mechanism
+        function applyCalientesFilters() {
+            const searchQuery = document.getElementById('calientes-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.caliente-card');
+
+            cards.forEach(card => {
+                const cardMonth = card.getAttribute('data-month');
+                const cardContent = card.innerText.toLowerCase();
+
+                const matchesMonth = (currentFilter === 'all' || cardMonth === currentFilter);
+                const matchesSearch = cardContent.includes(searchQuery);
+
+                if (matchesMonth && matchesSearch) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Goal forecasting calculator
+        function runProjectedSimulator() {
+            const visitas = parseFloat(document.getElementById('calc-visitas').value) || 0;
+            const cierre = parseFloat(document.getElementById('calc-cierre').value) || 0;
+            const result = (visitas * (cierre / 100)).toFixed(2);
+
+            document.getElementById('simulated-result').innerText = `${result} unidades`;
+        }
+
+        // Toast alert for direct operations dispatch
+        function triggerDispatch(leadName) {
             const container = document.createElement('div');
-            container.className = 'fixed bottom-5 right-5 bg-white border-l-4 border-torrentoGold-default text-slatePremium-900 px-6 py-4 rounded shadow-2xl z-50 text-xs transition-all duration-300 transform translate-y-10 opacity-0 max-w-sm paper-shadow';
+            container.className = 'fixed bottom-5 right-5 bg-slate-900 border-l-4 border-[#f2c35f] text-slate-100 px-6 py-4 rounded shadow-2xl z-50 text-xs transition-all duration-300 transform translate-y-10 opacity-0 max-w-sm';
             container.innerHTML = `
                 <div class="flex items-start gap-3">
-                    <div class="w-6 h-6 rounded-full bg-torrentoGold-light text-torrentoGold-dark flex items-center justify-center font-bold">
-                        <i class="fa-solid fa-bell"></i>
+                    <div class="w-6 h-6 rounded-full bg-[#f2c35f]/20 text-[#f2c35f] flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-paper-plane"></i>
                     </div>
                     <div>
-                        <p class="font-bold font-serif text-slatePremium-900">Instrucción Despachada</p>
-                        <p class="text-slate-600 mt-1 leading-relaxed">${actionText}</p>
+                        <p class="font-bold text-slate-100">Instrucción Directiva Despachada</p>
+                        <p class="text-slate-400 mt-1">Se ha notificado al asesor de ${leadName} para contactar de inmediato.</p>
                     </div>
                 </div>
             `;
@@ -645,61 +625,11 @@
             setTimeout(() => {
                 container.classList.add('translate-y-10', 'opacity-0');
                 setTimeout(() => container.remove(), 300);
-            }, 5000);
-        }
-
-        // Filter Pipeline Cards
-        function filterPipeline(filterType) {
-            // Toggle active filter button style
-            document.querySelectorAll('.pipe-filter-btn').forEach(btn => {
-                btn.classList.remove('bg-slatePremium-900', 'text-torrentoGold-default');
-                btn.classList.add('bg-white', 'border', 'border-neutral-200', 'text-slatePremium-900');
-            });
-
-            const activeBtn = event.currentTarget;
-            activeBtn.classList.remove('bg-white', 'border', 'border-neutral-200', 'text-slatePremium-900');
-            activeBtn.classList.add('bg-slatePremium-900', 'text-torrentoGold-default');
-
-            // Filter logic
-            const cards = document.querySelectorAll('.pipe-card');
-            cards.forEach(card => {
-                const categories = card.getAttribute('data-category');
-                if (filterType === 'all') {
-                    card.style.display = 'flex';
-                } else {
-                    if (categories.includes(filterType)) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }
-            });
-        }
-
-        // Goal forecasting simulator
-        function runSim() {
-            const visitas = parseFloat(document.getElementById('calc-visitas').value) || 0;
-            const tasa = parseFloat(document.getElementById('calc-tasa').value) || 0;
-            const projectedSales = (visitas * (tasa / 100)).toFixed(2);
-
-            const simSalesEl = document.getElementById('sim-sales');
-            const simStatusEl = document.getElementById('sim-status');
-
-            simSalesEl.innerText = `${projectedSales} unidades`;
-
-            if (projectedSales >= 3) {
-                simSalesEl.className = 'text-3xl font-serif font-bold text-emerald-600';
-                simStatusEl.innerText = 'Excelente. Ritmo ideal para cumplir la meta de 3 ventas.';
-                simStatusEl.className = 'text-[10px] font-bold text-emerald-600 mt-2';
-            } else {
-                simSalesEl.className = 'text-3xl font-serif font-bold text-torrentoGold-dark';
-                simStatusEl.innerText = 'Bajo la meta mensual requerida (3.0 Unidades).';
-                simStatusEl.className = 'text-[10px] font-bold text-red-600 mt-2';
-            }
+            }, 4000);
         }
 
         window.onload = function() {
-            runSim();
+            runProjectedSimulator();
         }
     </script>
 </body>
