@@ -1,541 +1,443 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dossier de Rendimiento - Torrento Residencial</title>
-    <!-- Tailwind CSS -->
+    <title>Dossier Ejecutivo - Torrento Residencial</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Roboto ONLY as requested -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
                         sans: ['Roboto', 'sans-serif'],
-                        serif: ['Roboto', 'sans-serif'],
                     },
                     colors: {
-                        gold: {
+                        champagne: {
                             DEFAULT: '#f2c35f',
                             dark: '#dca943',
                             light: '#f7d794'
                         },
-                        brandDark: '#0f172a',
-                        brandBg: '#f8fafc'
+                        paper: {
+                            DEFAULT: '#ffffff',
+                            dark: '#fcfbfa',
+                            shadow: '#f0ede9'
+                        }
                     }
                 }
             }
         }
     </script>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
+        body { font-family: 'Roboto', sans-serif; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-        .gold-border { border-color: #f2c35f; }
-        .gold-text { color: #f2c35f; }
-        .gold-bg { background-color: #f2c35f; }
     </style>
 </head>
-<body class="bg-[#f1f5f9] text-slate-800 antialiased flex flex-col lg:flex-row min-h-screen">
+<body class="bg-[#f7f6f4] text-slate-800 min-h-screen antialiased flex flex-col lg:flex-row">
 
-    <!-- Left Sidebar: Brand, Navigation and Persona -->
-    <aside class="w-full lg:w-80 bg-slate-900 text-slate-100 p-6 flex flex-col justify-between shrink-0 shadow-2xl">
+    <aside class="w-full lg:w-80 bg-slate-900 text-slate-100 p-6 flex flex-col justify-between shrink-0 shadow-xl">
         <div>
-            <!-- Brand Luxury Header -->
-            <div class="flex flex-col items-center mb-8 border-b border-slate-800 pb-6 text-center">
-                <img src="Torrento - icon.png" alt="Torrento Logo" class="w-24 h-auto mb-3 object-contain hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/120x60/0f172a/f2c35f?text=TORRENTO'">
-                <div class="text-center">
-                    <h1 class="font-bold text-lg tracking-wider text-[#f2c35f]">TORRENTO RESIDENCIAL</h1>
-                    <p class="text-[10px] text-slate-400 tracking-widest uppercase font-bold mt-1">Residencial Premium</p>
-                </div>
+            <div class="flex flex-col items-center text-center border-b border-slate-800 pb-6 mb-6">
+                <img src="Torrento - icon.png" alt="Torrento Logo" class="w-20 h-auto mb-2 filter brightness-100 object-contain">
+                <h1 class="font-bold text-lg tracking-wider text-[#f2c35f] uppercase">Torrento Residencial</h1>
+                <p class="text-[9px] text-slate-400 tracking-widest uppercase font-semibold mt-0.5">Control de Gestión Comercial</p>
             </div>
 
-            <!-- Commentary Personal Profile Block -->
-            <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/40 mb-6">
-                <div class="flex items-center space-x-3 mb-3">
-                    <div class="relative">
-                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-slate-950 rounded-full"></span>
-                        <div class="w-10 h-10 rounded-full bg-[#f2c35f]/20 flex items-center justify-center text-[#f2c35f] font-black border border-[#f2c35f]/30 text-sm">
-                            C
-                        </div>
+            <div class="bg-slate-800/40 rounded-xl p-4 border border-slate-700/50 mb-6">
+                <div class="flex items-center space-x-3 mb-2">
+                    <div class="w-9 h-9 rounded-full bg-[#f2c35f]/20 flex items-center justify-center text-[#f2c35f] font-bold border border-[#f2c35f]/30 text-xs">
+                        <i class="fa-solid fa-comment-dots"></i>
                     </div>
                     <div>
-                        <h3 class="text-xs font-bold text-slate-100">Comentario</h3>
-                        <p class="text-[10px] text-[#f2c35f] font-semibold uppercase tracking-wider">Dirección de Estrategia</p>
+                        <h3 class="text-xs font-bold text-slate-200 uppercase tracking-wider">Comentario</h3>
+                        <p class="text-[10px] text-[#f2c35f]">Estrategia e Inteligencia Comercial</p>
                     </div>
                 </div>
-                <p class="text-[11px] text-slate-400 leading-relaxed italic">
-                    "Control riguroso del dato comercial. Analizamos el histórico y blindamos el embudo para capitalizar cada lead."
+                <p class="text-[11px] text-slate-300 leading-relaxed italic">
+                    "El periodo del 15 de junio al 5 de julio sostiene el volumen de captación con 48 leads, pero la tasa de conversión final se ve presionada. Víctor rescata el periodo con una venta en Punto de Venta. Urge activar de forma inmediata el plan de llamadas al pipeline de prospectos calientes."
                 </p>
             </div>
 
-            <!-- Navigation Menu -->
             <nav class="space-y-1.5">
                 <button onclick="switchTab('resumen')" id="btn-resumen" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-bold transition-all bg-[#f2c35f] text-slate-950 shadow-md">
                     <i class="fa-solid fa-chart-pie text-base"></i>
-                    <span>Resumen Ejecutivo</span>
+                    <span>Resumen de Tres Semanas</span>
                 </button>
-                <button onclick="switchTab('asesores')" id="btn-asesores" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
-                    <i class="fa-solid fa-id-badge text-base"></i>
+                <button onclick="switchTab('asesores')" id="btn-asesores" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
+                    <i class="fa-solid fa-users text-base"></i>
                     <span>Fuerza de Ventas</span>
                 </button>
-                <button onclick="switchTab('pipeline')" id="btn-pipeline" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
-                    <i class="fa-solid fa-fire text-base"></i>
-                    <span>Leads Calientes & Visitas</span>
+                <button onclick="switchTab('pipeline')" id="btn-pipeline" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
+                    <i class="fa-solid fa-address-book text-base"></i>
+                    <span>Bitácora de Visitas (11)</span>
                 </button>
-                <button onclick="switchTab('analisis-historico')" id="btn-analisis-historico" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
-                    <i class="fa-solid fa-book-open text-base"></i>
-                    <span>Métricas y Simulador</span>
+                <button onclick="switchTab('calientes')" id="btn-calientes" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
+                    <i class="fa-solid fa-fire text-base text-amber-500"></i>
+                    <span class="font-bold text-amber-400">Leads Calientes (Histórico)</span>
                 </button>
             </nav>
         </div>
 
-        <!-- Corporate Meta -->
         <div class="pt-6 border-t border-slate-800 text-[10px] text-slate-500 space-y-1">
-            <p>Reporte de Campaña: Junio 2026</p>
-            <p>Corte: 01 - 14 Junio (Quincenal)</p>
-            <p class="text-[#f2c35f] font-semibold">Uso Interno - Dirección General</p>
+            <p>Reporte: Tres Semanas Operativas</p>
+            <p>Periodo: 15 Junio - 05 Julio 2026</p>
+            <p class="text-[#f2c35f] font-semibold">Exclusivo Dirección General</p>
         </div>
     </aside>
 
-    <!-- Main Content Panel (Elegant White Paper Look) -->
     <main class="flex-1 p-6 lg:p-10 max-w-6xl mx-auto w-full">
         
-        <!-- Sheet Container with Gold Accents -->
-        <div class="bg-white shadow-xl rounded-xl p-6 lg:p-10 border-t-8 border-[#f2c35f] relative min-h-[90vh] flex flex-col justify-between">
+        <div class="bg-white shadow-lg rounded-xl p-6 lg:p-10 border-t-4 border-[#f2c35f] relative min-h-[90vh] flex flex-col justify-between">
             
             <div>
-                <!-- Report Header -->
                 <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-slate-100 pb-6">
                     <div>
-                        <span class="text-[10px] font-bold text-[#f2c35f] uppercase tracking-wider block mb-1">Dossier Mensual de Operaciones</span>
-                        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Análisis Operativo de Rendimiento</h2>
+                        <span class="text-[10px] font-bold text-[#f2c35f] uppercase tracking-wider block mb-1">Dossier de Control y Tráfico</span>
+                        <h2 class="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight">Análisis Operativo Comercial</h2>
                     </div>
                     <div class="bg-[#f2c35f]/10 border border-[#f2c35f]/40 px-4 py-2 rounded-lg text-right">
-                        <p class="text-[9px] uppercase tracking-wider text-slate-500 font-bold">Avance de Meta Junio</p>
-                        <p class="text-lg font-bold text-slate-900">1 / 3 <span class="text-xs font-medium text-slate-500">Unidades</span></p>
+                        <p class="text-[9px] uppercase tracking-wider text-slate-500 font-bold">Cierre de Ventas Periodo</p>
+                        <p class="text-lg font-black text-slate-900">1 Unidad <span class="text-xs font-medium text-slate-500">(Víctor)</span></p>
                     </div>
                 </header>
 
-                <!-- ========================================== -->
-                <!-- TAB: RESUMEN EJECUTIVO                     -->
-                <!-- ========================================== -->
                 <div id="tab-resumen" class="tab-content active space-y-8">
                     
-                    <!-- KPI Counter Tiles -->
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 relative">
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Leads Nuevos (Q)</p>
-                            <h3 class="text-2xl font-black text-slate-800">22</h3>
-                            <span class="text-[9px] text-red-500 block mt-2 font-semibold"><i class="fa-solid fa-arrow-down"></i> -38% vs prom. Mayo</span>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Leads Totales</p>
+                            <h3 class="text-2xl font-black text-slate-800">48</h3>
+                            <span class="text-[9px] text-slate-500 block mt-2 font-medium">Origen: 48 Mkt / 1 Redes</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Visitas Físicas (Q)</p>
-                            <h3 class="text-2xl font-black text-slate-800">7</h3>
-                            <span class="text-[9px] text-slate-500 block mt-2 font-semibold"><i class="fa-solid fa-chart-line"></i> Conversión: 31.8%</span>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Visitas Logradas</p>
+                            <h3 class="text-2xl font-black text-slate-800">11</h3>
+                            <span class="text-[9px] text-slate-600 block mt-2 font-medium">Tasa Conversión: 22.9%</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Ventas Registradas</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Ventas Consolidadas</p>
                             <h3 class="text-2xl font-black text-emerald-600">1</h3>
-                            <span class="text-[9px] text-emerald-600 block mt-2 font-semibold uppercase tracking-wider">Apertura Efectiva</span>
+                            <span class="text-[9px] text-emerald-600 block mt-2 font-bold uppercase tracking-wider">Punto de Venta</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 border-r-4 border-r-[#f2c35f]">
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Efectividad Cierre</p>
-                            <h3 class="text-2xl font-black text-slate-800">14.2%</h3>
-                            <span class="text-[9px] text-emerald-600 block mt-2 font-semibold"><i class="fa-solid fa-arrow-up"></i> +8.3% vs Mayo</span>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Eficiencia Visita-Venta</p>
+                            <h3 class="text-2xl font-black text-slate-800">9.09%</h3>
+                            <span class="text-[9px] text-slate-500 block mt-2 font-medium">Asesor de Cierre: Víctor</span>
                         </div>
                     </div>
 
-                    <!-- Critical Executive Narrative (Comentario's Voice) -->
                     <div class="bg-slate-50 rounded-xl p-5 border-l-4 border-[#f2c35f] space-y-4">
-                        <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                            <i class="fa-solid fa-clipboard-list text-[#f2c35f]"></i>
-                            Análisis Técnico de la Quincena — Comentario
+                        <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-[#f2c35f]"></i>
+                            Análisis Técnico de la Operación
                         </h4>
                         <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
                             <p>
-                                🚨 **Alerta de Percepción Física (Urgente):** Se ha encendido un foco rojo en la visita de <em>Natalia Natalia (Asesor Marco Antonio)</em>. El prospecto se desperfiló explícitamente argumentando que el entorno del desarrollo, tanto interno como externo, se aprecia <strong>"descuidado, sucio e inseguro"</strong>. Se requiere de inmediato coordinar con post-venta y obras para asegurar el atractivo del camellón y las casas muestra; una preventa de Etapa 2 no se sostiene sobre accesos en malas condiciones.
+                                🎯 **Efectividad en Punto de Venta:** El cierre del periodo fue consolidado por **Víctor Tavares** mediante el canal de *Cita de Punto de Venta*. Esto balancea la efectividad frente al marketing puramente digital y ratifica que la atención espontánea en sitio mantiene una alta intención de compra.
                             </p>
                             <p>
-                                🎯 **Efectividad del Canal de Citas:** El periodo abre con **1 venta concretada por Evelia** generada por el canal de <em>Cita Marketing</em>. Esto ratifica que la pre-calificación y el perfilamiento telefónico previo a la cita presencial optimizan sustancialmente el porcentaje de conversión física.
+                                📈 **Análisis del Embudo e Interés en Inventario:** La bitácora de visitas arroja una fuerte concentración de interés en los modelos **Toulouse** (con y sin Roof Garden) y **Mónaco** de dos plantas. Los clientes se encuentran activamente comparando opciones en la zona; el seguimiento oportuno en las próximas 48 horas definirá los cierres de julio.
                             </p>
                             <p>
-                                ⚠️ **Desajuste de Filtro Crediticio:** Continuamos registrando fugas operativas evitables. La visita de *Erika B Falcon (Asesor Ana María)* resultó desperfilada por esquema **Fovissste**, el cual no es aplicable para la oferta comercial vigente en este periodo. Debemos endurecer la regla de asignación.
+                                ⚠️ **Filtrado Operativo:** Se registra un volumen de leads asignados elevado (49 en total repartidos en la fuerza comercial). Es de suma importancia monitorear el estatus de las llamadas de los asesores con mayor volumen como **Alex (12 leads)** y **Marco (11 leads)** para evitar el enfriamiento de la base.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Pipeline & Source Quick View -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Left: Source conversion efficiency -->
                         <div class="border border-slate-100 rounded-xl p-4">
-                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Eficiencia de Tráfico por Origen</h4>
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Fuentes de las Visitas Recibidas</h4>
                             <div class="space-y-2 text-xs">
                                 <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
-                                    <span class="text-slate-600">Citas Marketing</span>
-                                    <span class="font-bold text-slate-900">3 Visitas / 1 Venta (33.3%)</span>
+                                    <span class="text-slate-600">Leads de Marketing</span>
+                                    <span class="font-bold text-slate-900">10 Visitas</span>
                                 </div>
                                 <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
-                                    <span class="text-slate-600">Punto de Venta (Pase)</span>
-                                    <span class="font-bold text-slate-900">1 Visita (0 Ventas)</span>
-                                </div>
-                                <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
-                                    <span class="text-slate-600">Marketing Digital (Leads)</span>
-                                    <span class="font-bold text-slate-900">3 Visitas (0 Ventas)</span>
+                                    <span class="text-slate-600">Redes de Asesor</span>
+                                    <span class="font-bold text-slate-900">1 Visita</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Right: Actionable Hot Pipeline -->
                         <div class="border border-slate-100 rounded-xl p-4 flex flex-col justify-between">
                             <div>
-                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3 text-amber-600"><i class="fa-solid fa-fire"></i> Seguimientos Críticos del Mes</h4>
+                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3 text-amber-600"><i class="fa-solid fa-bullseye"></i> Focos de Seguimiento Inmediato</h4>
                                 <div class="space-y-2 text-[11px]">
-                                    <div class="p-2 bg-amber-50/50 rounded border border-amber-100">
-                                        <strong>Martín Colchado (Evelia):</strong> Cita Mkt el 06/06. Perfil interesado en Mónaco, seguimiento programado.
+                                    <div class="p-2 bg-amber-50/70 rounded border border-amber-100">
+                                        <strong>Alejandro Córdova (Evelia):</strong> Específicamente interesado en Toulouse con Roof Garden. Perfil de alta prioridad.
                                     </div>
                                     <div class="p-2 bg-slate-50 rounded">
-                                        <strong>Irlanda Idania (Alex):</strong> Buscando Mónaco 1 Planta, evaluando opciones activamente.
+                                        <strong>Edson Muñoz (Francisco):</strong> Interesado en Mónaco, pendiente de recontactar de forma inmediata.
                                     </div>
                                 </div>
                             </div>
-                            <button onclick="switchTab('pipeline')" class="w-full mt-3 text-center text-xs text-[#f2c35f] font-bold hover:text-slate-900 transition-colors">Ver bitácora de calientes →</button>
+                            <button onclick="switchTab('pipeline')" class="w-full mt-3 text-center text-xs text-[#f2c35f] font-bold hover:text-slate-900 transition-colors">Ver bitácora de visitas completas →</button>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- ========================================== -->
-                <!-- TAB: FUERZA DE VENTAS                     -->
-                <!-- ========================================== -->
                 <div id="tab-asesores" class="tab-content space-y-6">
-                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900">Análisis de Productividad de la Fuerza de Ventas</h3>
-                            <p class="text-xs text-slate-500">Métricas acumuladas y desempeño administrativo durante el periodo de Junio.</p>
-                        </div>
-                        <span class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded font-bold">Quincena Activa</span>
+                    <div class="border-b border-slate-100 pb-3">
+                        <h3 class="text-lg font-bold text-slate-900">Rendimiento por Fuerza de Ventas</h3>
+                        <p class="text-xs text-slate-500">Métricas correspondientes al periodo del 15 de junio al 5 de julio de 2026.</p>
                     </div>
 
-                    <!-- Advisors Table -->
                     <div class="border border-slate-100 rounded-xl overflow-hidden shadow-sm">
                         <table class="w-full text-left border-collapse text-xs">
                             <thead>
                                 <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase tracking-wider">
                                     <th class="p-4">Asesor</th>
-                                    <th class="p-4 text-center">Leads Asignados (Nuevos)</th>
-                                    <th class="p-4 text-center">Visitas Completadas</th>
-                                    <th class="p-4 text-center">Conversión</th>
-                                    <th class="p-4 text-center">Ventas</th>
-                                    <th class="p-4 text-center">Estatus Operativo</th>
+                                    <th class="p-4 text-center">Leads Asignados</th>
+                                    <th class="p-4 text-center">Visitas Logradas</th>
+                                    <th class="p-4 text-center">Tasa de Conversión</th>
+                                    <th class="p-4 text-center">Ventas Cerradas</th>
+                                    <th class="p-4 text-center">Estatus</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100 text-slate-600">
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
-                                        <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-[10px]">EM</div>
-                                        <span>Evelia Muñoz</span>
-                                    </td>
-                                    <td class="p-4 text-center">6*</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
-                                    <td class="p-4 text-center">16.6%</td>
+                                    <td class="p-4 font-bold text-slate-900">Víctor Tavares</td>
+                                    <td class="p-4 text-center">7</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">2</td>
+                                    <td class="p-4 text-center">28.5%</td>
                                     <td class="p-4 text-center font-bold text-emerald-600 text-sm">1</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full font-medium">Líder de Cierre</span></td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full font-medium font-bold">Líder Comercial</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
-                                        <div class="w-6 h-6 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px]">AF</div>
-                                        <span>Ana María Flores</span>
-                                    </td>
-                                    <td class="p-4 text-center">5</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">2</td>
-                                    <td class="p-4 text-center">40.0%</td>
-                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
+                                    <td class="p-4 font-semibold text-slate-900">Evelia Muñoz</td>
+                                    <td class="p-4 text-center">10</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">3</td>
+                                    <td class="p-4 text-center">30.0%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full font-medium">Mayor Tráfico</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
-                                        <div class="w-6 h-6 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px]">MC</div>
-                                        <span>Marco Antonio Castro</span>
-                                    </td>
-                                    <td class="p-4 text-center">5</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">2</td>
-                                    <td class="p-4 text-center">40.0%</td>
-                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
+                                    <td class="p-4 font-semibold text-slate-900">Alex Koyoc</td>
+                                    <td class="p-4 text-center">12</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">3</td>
+                                    <td class="p-4 text-center">25.0%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
-                                        <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-[10px]">AK</div>
-                                        <span>Alex Koyoc</span>
-                                    </td>
-                                    <td class="p-4 text-center">1</td>
+                                    <td class="p-4 font-semibold text-slate-900">Ana María Flores</td>
+                                    <td class="p-4 text-center">7</td>
                                     <td class="p-4 text-center font-bold text-slate-800">1</td>
-                                    <td class="p-4 text-center">100.0%</td>
-                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full font-medium">Alta Conversión</span></td>
+                                    <td class="p-4 text-center">14.2%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900 flex items-center gap-2">
-                                        <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-[10px]">FG</div>
-                                        <span>Francisco González</span>
-                                    </td>
-                                    <td class="p-4 text-center">3</td>
+                                    <td class="p-4 font-semibold text-slate-900">Marco Antonio Castro</td>
+                                    <td class="p-4 text-center">11</td>
                                     <td class="p-4 text-center font-bold text-slate-800">1</td>
-                                    <td class="p-4 text-center">33.3%</td>
-                                    <td class="p-4 text-center font-bold text-slate-400">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-1 bg-amber-50 text-amber-600 rounded-full font-medium">En Observación</span></td>
+                                    <td class="p-4 text-center">9.0%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900">Francisco González</td>
+                                    <td class="p-4 text-center">2</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
+                                    <td class="p-4 text-center">50.0%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-amber-50 text-amber-600 rounded-full font-medium">En Observación</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-[10px] text-slate-400 italic">*Nota técnica: La asignación cruda de Evelia se ajustó para fines de consistencia con el flujo real de leads calificados de la quincena.</p>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- TAB: LEADS CALIENTES & VISITAS            -->
-                <!-- ========================================== -->
-                <div id="tab-pipeline" class="tab-content space-y-6">
-                    <div class="border-b border-slate-100 pb-3">
-                        <h3 class="text-lg font-bold text-slate-900">Seguimiento Unificado de Leads Calientes (Abril - Junio 2026)</h3>
-                        <p class="text-xs text-slate-500">Historial estratégico de prospectos que ya visitaron el desarrollo y mostraron un interés positivo real.</p>
-                    </div>
-
-                    <!-- Filter Controls -->
-                    <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <div class="flex flex-wrap gap-2 text-xs">
-                            <button onclick="filterCalientes('all')" class="caliente-btn bg-[#f2c35f] text-slate-950 px-3 py-1.5 rounded font-bold transition-all shadow-sm">Todos</button>
-                            <button onclick="filterCalientes('junio')" class="caliente-btn bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded font-semibold transition-all">Junio</button>
-                            <button onclick="filterCalientes('mayo')" class="caliente-btn bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded font-semibold transition-all">Mayo</button>
-                            <button onclick="filterCalientes('abril')" class="caliente-btn bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded font-semibold transition-all">Abril</button>
-                        </div>
-                        <div class="relative w-full sm:w-64">
-                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-                            <input oninput="searchCalientes()" id="calientes-search" type="text" placeholder="Buscar prospecto..." class="w-full bg-white border border-slate-200 rounded-lg p-2 pl-8 text-xs focus:ring-1 focus:ring-[#f2c35f] focus:outline-none">
+                <div id="tab-pipeline" class="tab-content space-y-4">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Bitácora de Visitas de las Últimas 3 Semanas</h3>
+                            <p class="text-xs text-slate-500">Listado de los 11 registros capturados.</p>
                         </div>
                     </div>
 
-                    <!-- Dynamic Cards Grid -->
-                    <div id="calientes-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        
-                        <!-- JUNE LEADS -->
-                        <!-- Lead 1 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="junio">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[9px] font-bold uppercase rounded">Junio • Cita Mkt</span>
-                                    <span class="text-[10px] text-slate-400">06/06/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">MARTIN COLCHADO</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Revisa información, se le da seguimiento el próximo jueves 11 de Junio."</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Carol García</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Martin Colchado - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Ana María | 01/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Se le brinda información (Posible asesora externas)."</p>
                         </div>
-
-                        <!-- Lead 2 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="junio">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[9px] font-bold uppercase rounded">Junio • Marketing</span>
-                                    <span class="text-[10px] text-slate-400">05/06/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Irlanda Idania Aguilar</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Alex Koyoc</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Se lleva información, interesada en Mónaco 1 Planta, se le da seguimiento, está viendo opciones."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>María de Lourdes Delgado</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Irlanda Idania - Alex')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia Muñoz | 27/06/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Se lleva información y pide llamada para dar respuesta."</p>
                         </div>
-
-                        <!-- MAY LEADS -->
-                        <!-- Lead 3 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Marketing</span>
-                                    <span class="text-[10px] text-slate-400">20/05/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Sergio NA</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Se va muy interesado y se lleva referencia de apartado física, lo va a platicar con su pareja para concretar depósito."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>María del Carmen NA</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Sergio NA - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia Muñoz | 01/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Le interesa Toulouse pero menciona que solo está visitando varios fraccionamientos."</p>
                         </div>
-
-                        <!-- Lead 4 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Redes Asesor</span>
-                                    <span class="text-[10px] text-slate-400">29/05/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Sin Nombre (Nov 2024)</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Contacto histórico, ahora por Mónaco 1 Planta. Decide el 1 de Junio 2026."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Alejandro Córdova</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Sin Nombre - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia Muñoz | 04/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic font-medium text-slate-900">"Interesado en una Toulouse con Roof Garden."</p>
                         </div>
-
-                        <!-- Lead 5 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Cita Mkt</span>
-                                    <span class="text-[10px] text-slate-400">09/05/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Bladimir Serna</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesado en Mónaco 1 Planta. Espera a la terminación de la Casa Muestra para visitarla físicamente."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Edson Muñoz</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Bladimir - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Francisco González | 28/06/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Quedó de pasar nuevamente o mandar mensaje. Interesado en Mónaco."</p>
                         </div>
-
-                        <!-- Lead 6 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Punto de Venta</span>
-                                    <span class="text-[10px] text-slate-400">08/05/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Cristian Omar</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Resuelve dudas sobre Mónaco, muy interesado en apartado pero saldrá fuera, se retoma el 19 de Mayo."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Víctor Javier Ibarra</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Cristian Omar - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 05/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Indeciso entre Toulouse sin Roof Garden o Mónaco de dos Plantas."</p>
                         </div>
-
-                        <!-- Lead 7 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="mayo">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[9px] font-bold uppercase rounded">Mayo • Punto de Venta</span>
-                                    <span class="text-[10px] text-slate-400">15/05/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Luis Pantoja</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Pase, interesado en Toulouse, regresará con su esposa para confirmar."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Alexis Calderón</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Luis Pantoja - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Alex | 25/06/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Está viendo opciones, se interesó por modelo Toulouse y se da seguimiento."</p>
                         </div>
-
-                        <!-- ABRIL LEADS -->
-                        <!-- Lead 8 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="abril">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[9px] font-bold uppercase rounded">Abril • Marketing</span>
-                                    <span class="text-[10px] text-slate-400">18/04/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Joana Dorado</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesados en Mónaco para inversión, trabajan en Banbajío. Pendientes por definir ubicación de las dos disponibles."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Jessica NA</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Joana Dorado - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Víctor Tavares | 05/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesada en Casa Mónaco de dos Plantas."</p>
                         </div>
-
-                        <!-- Lead 9 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="abril">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[9px] font-bold uppercase rounded">Abril • Cita Mkt</span>
-                                    <span class="text-[10px] text-slate-400">05/04/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Alan Chávez</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Evelia Muñoz</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesado en Mónaco 2P con crédito Cofinavit, revisa tema de dinero para apartar y se comunica."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Alonso Hernán</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Alan Chavez - Evelia')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Víctor Tavares | 27/06/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Agendó cita nuevamente para seguimiento en sitio."</p>
                         </div>
-
-                        <!-- Lead 10 -->
-                        <div class="caliente-card bg-white border border-slate-100 p-4 rounded-xl shadow-sm space-y-3 flex flex-col justify-between" data-month="abril">
-                            <div>
-                                <div class="flex justify-between items-start">
-                                    <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[9px] font-bold uppercase rounded">Abril • Cita Mkt</span>
-                                    <span class="text-[10px] text-slate-400">04/04/2026</span>
-                                </div>
-                                <h4 class="font-bold text-slate-900 mt-2">Lupita Capulín</h4>
-                                <p class="text-[10px] text-slate-500">Asesor: <strong>Marco Antonio</strong></p>
-                                <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded border border-slate-100 italic">"Interesada en Mónaco 2P, se envía información y solicita cotización en Caja Popular."</p>
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Óscar Servín</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
                             </div>
-                            <button onclick="triggerDispatch('Lupita Capulin - Marco')" class="w-full mt-3 bg-[#f2c35f] hover:bg-[#dca943] text-slate-950 font-bold text-[10px] py-1.5 rounded transition-all">Registrar Seguimiento</button>
+                            <p class="text-[11px] text-slate-500">Asesor: Alex | 28/06/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Acude a cita el día 28-06-26 y se da seguimiento de respuesta."</p>
                         </div>
-
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Manuel Ruiz</span>
+                                <span class="text-[9px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">Redes Asesor</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Alex | 20/06/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Está viendo opciones, en un mes dará aviso. Mostró fuerte interés por Toulouse."</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- TAB: ANÁLISIS HISTÓRICO & SIMULADOR        -->
-                <!-- ========================================== -->
-                <div id="tab-analisis-historico" class="tab-content space-y-6">
+                <div id="tab-calientes" class="tab-content space-y-4">
                     <div class="border-b border-slate-100 pb-3">
-                        <h3 class="text-lg font-bold text-slate-900">Métricas y Simulador de Metas</h3>
-                        <p class="text-xs text-slate-500">Herramientas financieras y proyecciones de volumen comercial.</p>
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-fire text-amber-500"></i>
+                            Concentrado de Leads Calientes Activos (Abril - Mayo - Junio/Julio)
+                        </h3>
+                        <p class="text-xs text-slate-500">Prospectos que ya asistieron al desarrollo y reflejan clara intención de compra o retroalimentación altamente positiva.</p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Left: Real CPL Stats -->
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 space-y-4">
-                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider">Eficiencia de Inversión</h4>
-                            <div class="space-y-3 text-xs">
-                                <div class="flex justify-between border-b border-slate-200 pb-2">
-                                    <span class="text-slate-600">Costo por Lead Promedio:</span>
-                                    <span class="font-bold text-slate-900">$30.67 USD</span>
-                                </div>
-                                <div class="flex justify-between border-b border-slate-200 pb-2">
-                                    <span class="text-slate-600">Leads Generados Mayo:</span>
-                                    <span class="font-bold text-slate-900">71</span>
-                                </div>
-                                <div class="flex justify-between pb-1">
-                                    <span class="text-slate-600">Leads Generados Junio (Q1):</span>
-                                    <span class="font-bold text-slate-900">22</span>
-                                </div>
+                    <div class="space-y-3">
+                        <div class="p-3 border border-amber-200 bg-amber-50/30 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded mr-2">Junio / Julio</span>
+                                <strong class="text-slate-900 text-xs">Alejandro Córdova</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Interesado de forma directa en el modelo Toulouse con Roof Garden."</p>
                             </div>
-                            <p class="text-[10px] text-slate-400 italic">El Costo por Lead en el segmento residencial premium se mantiene altamente competitivo.</p>
+                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">Alta Prioridad</span>
                         </div>
 
-                        <!-- Right: Interactive Goal Simulator -->
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 flex flex-col justify-between">
+                        <div class="p-3 border border-amber-200 bg-amber-50/30 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
-                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Simulador de Conversión de Junio</h4>
-                                <div class="space-y-3 text-xs">
-                                    <div>
-                                        <label class="block text-slate-600 mb-1">Visitas estimadas para la quincena 2:</label>
-                                        <input type="number" id="calc-visitas" value="10" class="w-full bg-white border border-slate-200 rounded p-1.5 focus:outline-none focus:ring-1 focus:ring-[#f2c35f]" oninput="runProjectedSimulator()">
-                                    </div>
-                                    <div>
-                                        <label class="block text-slate-600 mb-1">Tasa de cierre esperada (%):</label>
-                                        <input type="number" id="calc-cierre" value="15" class="w-full bg-white border border-slate-200 rounded p-1.5 focus:outline-none focus:ring-1 focus:ring-[#f2c35f]" oninput="runProjectedSimulator()">
-                                    </div>
-                                </div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded mr-2">Junio / Julio</span>
+                                <strong class="text-slate-900 text-xs">Víctor Javier Ibarra</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Decidiendo entre Toulouse sin Roof Garden o Mónaco 2 Plantas."</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs">
-                                <p class="text-slate-500">Cierres Adicionales Proyectados:</p>
-                                <p id="simulated-result" class="text-xl font-bold text-emerald-600">1.50 unidades</p>
+                            <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-200">En Cierre</span>
+                        </div>
+
+                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Mayo</span>
+                                <strong class="text-slate-900 text-xs">Martín Colchado</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Revisa información técnica de financiamiento para toma de decisión."</p>
                             </div>
+                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
+                        </div>
+
+                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Mayo</span>
+                                <strong class="text-slate-900 text-xs font-medium">Irlanda Idania Aguilar</strong> <span class="text-xs text-slate-500">(Asesor: Alex)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Interesada en modelo Mónaco 1 Planta, evaluando propuesta de enganche."</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
+                        </div>
+
+                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Abril</span>
+                                <strong class="text-slate-900 text-xs">Alan Chávez</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Interesado en Mónaco 2P con crédito Cofinavit, revisando flujo para apartado."</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
+                        </div>
+
+                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Abril</span>
+                                <strong class="text-slate-900 text-xs">Lupita Capulín</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Interesada en Mónaco 2P, solicitó corrida y cotización formal para Caja Popular."</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
+                        </div>
+
+                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Abril</span>
+                                <strong class="text-slate-900 text-xs">Francisco Javier Cornejo</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Muy interesado en Mónaco con promesa de apartado; requiere validación de referencia."</p>
+                            </div>
+                            <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-200">Reactivar</span>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Custom Sheet Footer Concept -->
             <footer class="mt-12 pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-400 gap-2">
-                <div>Documento Interno de Alta Dirección - Prohibida su reproducción.</div>
-                <div class="font-medium text-slate-700">Torrento Residencial S.A. de C.V.</div>
+                <div>Documento Corporativo de Distribución Interna - Dirección General.</div>
+                <div class="font-bold text-slate-700">Torrento Residencial S.A. de C.V.</div>
             </footer>
 
         </div>
     </main>
 
-    <!-- JS Logic Switcher -->
     <script>
-        // Switch between major tabs
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -547,89 +449,6 @@
             const activeBtn = document.getElementById('btn-' + tabId);
             activeBtn.classList.remove('text-slate-400', 'hover:text-slate-100', 'hover:bg-slate-800');
             activeBtn.classList.add('bg-[#f2c35f]', 'text-slate-950', 'shadow-md');
-        }
-
-        // Live filtering for the "Leads Calientes" cards
-        let currentFilter = 'all';
-
-        function filterCalientes(month) {
-            currentFilter = month;
-            // Update active states on filter buttons
-            document.querySelectorAll('.caliente-btn').forEach(btn => {
-                btn.classList.remove('bg-[#f2c35f]', 'text-slate-950', 'font-bold');
-                btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
-            });
-
-            const clickedBtn = event.currentTarget;
-            clickedBtn.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
-            clickedBtn.classList.add('bg-[#f2c35f]', 'text-slate-950', 'font-bold');
-
-            applyCalientesFilters();
-        }
-
-        // Search logic inside calientes tab
-        function searchCalientes() {
-            applyCalientesFilters();
-        }
-
-        // Unified filtration mechanism
-        function applyCalientesFilters() {
-            const searchQuery = document.getElementById('calientes-search').value.toLowerCase();
-            const cards = document.querySelectorAll('.caliente-card');
-
-            cards.forEach(card => {
-                const cardMonth = card.getAttribute('data-month');
-                const cardContent = card.innerText.toLowerCase();
-
-                const matchesMonth = (currentFilter === 'all' || cardMonth === currentFilter);
-                const matchesSearch = cardContent.includes(searchQuery);
-
-                if (matchesMonth && matchesSearch) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Goal forecasting calculator
-        function runProjectedSimulator() {
-            const visitas = parseFloat(document.getElementById('calc-visitas').value) || 0;
-            const cierre = parseFloat(document.getElementById('calc-cierre').value) || 0;
-            const result = (visitas * (cierre / 100)).toFixed(2);
-
-            document.getElementById('simulated-result').innerText = `${result} unidades`;
-        }
-
-        // Toast alert for direct operations dispatch
-        function triggerDispatch(leadName) {
-            const container = document.createElement('div');
-            container.className = 'fixed bottom-5 right-5 bg-slate-900 border-l-4 border-[#f2c35f] text-slate-100 px-6 py-4 rounded shadow-2xl z-50 text-xs transition-all duration-300 transform translate-y-10 opacity-0 max-w-sm';
-            container.innerHTML = `
-                <div class="flex items-start gap-3">
-                    <div class="w-6 h-6 rounded-full bg-[#f2c35f]/20 text-[#f2c35f] flex items-center justify-center font-bold">
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-100">Instrucción Directiva Despachada</p>
-                        <p class="text-slate-400 mt-1">Se ha notificado al asesor de ${leadName} para contactar de inmediato.</p>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(container);
-
-            setTimeout(() => {
-                container.classList.remove('translate-y-10', 'opacity-0');
-            }, 50);
-
-            setTimeout(() => {
-                container.classList.add('translate-y-10', 'opacity-0');
-                setTimeout(() => container.remove(), 300);
-            }, 4000);
-        }
-
-        window.onload = function() {
-            runProjectedSimulator();
         }
     </script>
 </body>
