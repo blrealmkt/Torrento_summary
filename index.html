@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dossier Ejecutivo - Torrento Residencial</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -38,14 +41,17 @@
 </head>
 <body class="bg-[#f7f6f4] text-slate-800 min-h-screen antialiased flex flex-col lg:flex-row">
 
+    <!-- Left Sidebar: Corporate Navigation -->
     <aside class="w-full lg:w-80 bg-slate-900 text-slate-100 p-6 flex flex-col justify-between shrink-0 shadow-xl">
         <div>
+            <!-- Brand Luxury Header with Brand Icon -->
             <div class="flex flex-col items-center text-center border-b border-slate-800 pb-6 mb-6">
                 <img src="Torrento - icon.png" alt="Torrento Logo" class="w-20 h-auto mb-2 filter brightness-100 object-contain">
                 <h1 class="font-bold text-lg tracking-wider text-[#f2c35f] uppercase">Torrento Residencial</h1>
                 <p class="text-[9px] text-slate-400 tracking-widest uppercase font-semibold mt-0.5">Control de Gestión Comercial</p>
             </div>
 
+            <!-- Profile Block / Technical Feedback Section -->
             <div class="bg-slate-800/40 rounded-xl p-4 border border-slate-700/50 mb-6">
                 <div class="flex items-center space-x-3 mb-2">
                     <div class="w-9 h-9 rounded-full bg-[#f2c35f]/20 flex items-center justify-center text-[#f2c35f] font-bold border border-[#f2c35f]/30 text-xs">
@@ -57,22 +63,23 @@
                     </div>
                 </div>
                 <p class="text-[11px] text-slate-300 leading-relaxed italic">
-                    "El periodo del 15 de junio al 5 de julio sostiene el volumen de captación con 48 leads, pero la tasa de conversión final se ve presionada. Víctor rescata el periodo con una venta en Punto de Venta. Urge activar de forma inmediata el plan de llamadas al pipeline de prospectos calientes."
+                    "El periodo del 15 de julio al 15 de agosto registra un repunte histórico en volumen con 74 leads y 20 visitas presenciales. Marco lidera la quincena en tráfico y logra el cierre efectivo de Carmen Rodríguez mediante segunda visita en Punto de Venta. Atención prioritaria en regularizar capturas faltantes (Marcela/Marco) y blindar apartados en trámite (Nina Vera)."
                 </p>
             </div>
 
+            <!-- Navigation Menu -->
             <nav class="space-y-1.5">
                 <button onclick="switchTab('resumen')" id="btn-resumen" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-bold transition-all bg-[#f2c35f] text-slate-950 shadow-md">
                     <i class="fa-solid fa-chart-pie text-base"></i>
-                    <span>Resumen de Tres Semanas</span>
+                    <span>Resumen de Un Mes</span>
                 </button>
                 <button onclick="switchTab('asesores')" id="btn-asesores" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
                     <i class="fa-solid fa-users text-base"></i>
-                    <span>Fuerza de Ventas</span>
+                    <span>Fuerza de Ventas (8 Asesores)</span>
                 </button>
                 <button onclick="switchTab('pipeline')" id="btn-pipeline" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
                     <i class="fa-solid fa-address-book text-base"></i>
-                    <span>Bitácora de Visitas (11)</span>
+                    <span>Bitácora de Visitas (20)</span>
                 </button>
                 <button onclick="switchTab('calientes')" id="btn-calientes" class="tab-btn w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800">
                     <i class="fa-solid fa-fire text-base text-amber-500"></i>
@@ -81,18 +88,22 @@
             </nav>
         </div>
 
+        <!-- Corporate Meta -->
         <div class="pt-6 border-t border-slate-800 text-[10px] text-slate-500 space-y-1">
-            <p>Reporte: Tres Semanas Operativas</p>
-            <p>Periodo: 15 Junio - 05 Julio 2026</p>
+            <p>Reporte: Periodo de Un Mes</p>
+            <p>Periodo: 15 Julio - 15 Agosto 2026</p>
             <p class="text-[#f2c35f] font-semibold">Exclusivo Dirección General</p>
         </div>
     </aside>
 
+    <!-- Main Content Panel (Elegant White Paper Look) -->
     <main class="flex-1 p-6 lg:p-10 max-w-6xl mx-auto w-full">
         
+        <!-- Sheet Container with Gold Accents -->
         <div class="bg-white shadow-lg rounded-xl p-6 lg:p-10 border-t-4 border-[#f2c35f] relative min-h-[90vh] flex flex-col justify-between">
             
             <div>
+                <!-- Report Header -->
                 <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-slate-100 pb-6">
                     <div>
                         <span class="text-[10px] font-bold text-[#f2c35f] uppercase tracking-wider block mb-1">Dossier de Control y Tráfico</span>
@@ -100,35 +111,40 @@
                     </div>
                     <div class="bg-[#f2c35f]/10 border border-[#f2c35f]/40 px-4 py-2 rounded-lg text-right">
                         <p class="text-[9px] uppercase tracking-wider text-slate-500 font-bold">Cierre de Ventas Periodo</p>
-                        <p class="text-lg font-black text-slate-900">1 Unidad <span class="text-xs font-medium text-slate-500">(Víctor)</span></p>
+                        <p class="text-lg font-black text-slate-900">1 Unidad <span class="text-xs font-medium text-slate-500">(Marco - Mónaco 2P)</span></p>
                     </div>
                 </header>
 
+                <!-- ========================================== -->
+                <!-- TAB: RESUMEN EJECUTIVO                     -->
+                <!-- ========================================== -->
                 <div id="tab-resumen" class="tab-content active space-y-8">
                     
+                    <!-- KPI Counter Tiles -->
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
                             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Leads Totales</p>
-                            <h3 class="text-2xl font-black text-slate-800">48</h3>
-                            <span class="text-[9px] text-slate-500 block mt-2 font-medium">Origen: 48 Mkt / 1 Redes</span>
+                            <h3 class="text-2xl font-black text-slate-800">74</h3>
+                            <span class="text-[9px] text-slate-500 block mt-2 font-medium">62 Mkt / 4 Citas Mkt / 2 Redes / 2 PDV</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
                             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Visitas Logradas</p>
-                            <h3 class="text-2xl font-black text-slate-800">11</h3>
-                            <span class="text-[9px] text-slate-600 block mt-2 font-medium">Tasa Conversión: 22.9%</span>
+                            <h3 class="text-2xl font-black text-slate-800">20</h3>
+                            <span class="text-[9px] text-emerald-600 block mt-2 font-medium">Tasa Conversión: 27.0%</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
                             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Ventas Consolidadas</p>
                             <h3 class="text-2xl font-black text-emerald-600">1</h3>
-                            <span class="text-[9px] text-emerald-600 block mt-2 font-bold uppercase tracking-wider">Punto de Venta</span>
+                            <span class="text-[9px] text-emerald-600 block mt-2 font-bold uppercase tracking-wider">Apartado Confirmado</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 border-r-4 border-r-[#f2c35f]">
                             <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Eficiencia Visita-Venta</p>
-                            <h3 class="text-2xl font-black text-slate-800">9.09%</h3>
-                            <span class="text-[9px] text-slate-500 block mt-2 font-medium">Asesor de Cierre: Víctor</span>
+                            <h3 class="text-2xl font-black text-slate-800">5.0%</h3>
+                            <span class="text-[9px] text-slate-500 block mt-2 font-medium">Cierre: Carmen Rodríguez (Marco)</span>
                         </div>
                     </div>
 
+                    <!-- Strategic Analysis Box -->
                     <div class="bg-slate-50 rounded-xl p-5 border-l-4 border-[#f2c35f] space-y-4">
                         <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
                             <i class="fa-solid fa-briefcase text-[#f2c35f]"></i>
@@ -136,56 +152,74 @@
                         </h4>
                         <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
                             <p>
-                                🎯 **Efectividad en Punto de Venta:** El cierre del periodo fue consolidado por **Víctor Tavares** mediante el canal de *Cita de Punto de Venta*. Esto balancea la efectividad frente al marketing puramente digital y ratifica que la atención espontánea en sitio mantiene una alta intención de compra.
+                                🎯 **Efectividad en Punto de Venta y Cierre:** El único cierre del mes se logró gracias a la metodología de segunda visita en Punto de Venta ejecutada por **Marco**, amarrando el **Apartado de la Casa Mónaco 2P (MZ06 LT 19)** con la clienta **Carmen Rodríguez**. Esto confirma que el seguimiento estrecho a clientes en segunda cita es la ruta más corta a la facturación.
                             </p>
                             <p>
-                                📈 **Análisis del Embudo e Interés en Inventario:** La bitácora de visitas arroja una fuerte concentración de interés en los modelos **Toulouse** (con y sin Roof Garden) y **Mónaco** de dos plantas. Los clientes se encuentran activamente comparando opciones en la zona; el seguimiento oportuno en las próximas 48 horas definirá los cierres de julio.
+                                📈 **Repunte de Tráfico Presencial:** El proyecto registró un incremento notable en atracción física alcanzando **20 visitas presenciales** (lideradas por Marco con 11, Evelia con 5 y la incorporación activa de Marcela con 4). Las Fuentes de *Citas de Marketing* (5) y *Punto de Venta* (2) mantuvieron una tasa de conversión presencial cercana al 100% de su prospección.
                             </p>
                             <p>
-                                ⚠️ **Filtrado Operativo:** Se registra un volumen de leads asignados elevado (49 en total repartidos en la fuerza comercial). Es de suma importancia monitorear el estatus de las llamadas de los asesores con mayor volumen como **Alex (12 leads)** y **Marco (11 leads)** para evitar el enfriamiento de la base.
+                                ⚠️ **Puntos Ciegos y Fricciones de Proyecto:** 
+                                1) **Acometida de Faltas en Captura:** Se detectan registros sin retroalimentación ("Sin Retro") en visitas físicas atendidas por Marcela (María Fernanda Ramírez) y Marco (Israel Mata). Se debe exigir captura inmediata. 
+                                2) **Objeción de Producto:** El prospecto Efrén Aguiñaga (Marco) declinó la compra por **rechazo explícito al proyecto de Departamentos**, lo que requiere que la fuerza de ventas maneje argumentos de independización y convivencia entre etapas.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Quick Traffic Distribution Overview -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="border border-slate-100 rounded-xl p-4">
-                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Fuentes de las Visitas Recibidas</h4>
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Fuentes de las Visitas Recibidas (20 Total)</h4>
                             <div class="space-y-2 text-xs">
                                 <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
-                                    <span class="text-slate-600">Leads de Marketing</span>
-                                    <span class="font-bold text-slate-900">10 Visitas</span>
+                                    <span class="text-slate-600">Leads de Marketing Digital</span>
+                                    <span class="font-bold text-slate-900">8 Visitas</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
+                                    <span class="text-slate-600">Citas de Marketing</span>
+                                    <span class="font-bold text-slate-900">5 Visitas</span>
                                 </div>
                                 <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
                                     <span class="text-slate-600">Redes de Asesor</span>
-                                    <span class="font-bold text-slate-900">1 Visita</span>
+                                    <span class="font-bold text-slate-900">3 Visitas</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-slate-50 rounded">
+                                    <span class="text-slate-600">Punto de Venta (Pase)</span>
+                                    <span class="font-bold text-slate-900">2 Visitas</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="border border-slate-100 rounded-xl p-4 flex flex-col justify-between">
                             <div>
-                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3 text-amber-600"><i class="fa-solid fa-bullseye"></i> Focos de Seguimiento Inmediato</h4>
+                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3 text-amber-600"><i class="fa-solid fa-bullseye"></i> Focos de Cierre Inmediato (Dinero en la Mesa)</h4>
                                 <div class="space-y-2 text-[11px]">
                                     <div class="p-2 bg-amber-50/70 rounded border border-amber-100">
-                                        <strong>Alejandro Córdova (Evelia):</strong> Específicamente interesado en Toulouse con Roof Garden. Perfil de alta prioridad.
+                                        <strong>Nina Vera (Evelia):</strong> Se llevó referencia para apartado físico. Pendiente únicamente de confirmar ubicación.
                                     </div>
                                     <div class="p-2 bg-slate-50 rounded">
-                                        <strong>Edson Muñoz (Francisco):</strong> Interesado en Mónaco, pendiente de recontactar de forma inmediata.
+                                        <strong>Oscar Navarro (Evelia):</strong> Interesado en Mónaco 2P, revisando aprobación de crédito BanBajío.
+                                    </div>
+                                    <div class="p-2 bg-slate-50 rounded">
+                                        <strong>Pris Herrera (Rafael):</strong> Crédito BBVA autorizado con vigencia de 3 meses. Urge acelerar elección de ubicación.
                                     </div>
                                 </div>
                             </div>
-                            <button onclick="switchTab('pipeline')" class="w-full mt-3 text-center text-xs text-[#f2c35f] font-bold hover:text-slate-900 transition-colors">Ver bitácora de visitas completas →</button>
+                            <button onclick="switchTab('pipeline')" class="w-full mt-3 text-center text-xs text-[#f2c35f] font-bold hover:text-slate-900 transition-colors">Ver bitácora de 20 visitas →</button>
                         </div>
                     </div>
 
                 </div>
 
+                <!-- ========================================== -->
+                <!-- TAB: FUERZA DE VENTAS                     -->
+                <!-- ========================================== -->
                 <div id="tab-asesores" class="tab-content space-y-6">
                     <div class="border-b border-slate-100 pb-3">
-                        <h3 class="text-lg font-bold text-slate-900">Rendimiento por Fuerza de Ventas</h3>
-                        <p class="text-xs text-slate-500">Métricas correspondientes al periodo del 15 de junio al 5 de julio de 2026.</p>
+                        <h3 class="text-lg font-bold text-slate-900">Rendimiento por Fuerza de Ventas (8 Asesores)</h3>
+                        <p class="text-xs text-slate-500">Métricas correspondientes al periodo del 15 de julio al 15 de agosto de 2026.</p>
                     </div>
 
+                    <!-- Table -->
                     <div class="border border-slate-100 rounded-xl overflow-hidden shadow-sm">
                         <table class="w-full text-left border-collapse text-xs">
                             <thead>
@@ -193,242 +227,351 @@
                                     <th class="p-4">Asesor</th>
                                     <th class="p-4 text-center">Leads Asignados</th>
                                     <th class="p-4 text-center">Visitas Logradas</th>
-                                    <th class="p-4 text-center">Tasa de Conversión</th>
+                                    <th class="p-4 text-center">Tasa Conversión Visita</th>
                                     <th class="p-4 text-center">Ventas Cerradas</th>
-                                    <th class="p-4 text-center">Estatus</th>
+                                    <th class="p-4 text-center">Estatus Operativo</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100 text-slate-600">
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-bold text-slate-900">Víctor Tavares</td>
-                                    <td class="p-4 text-center">7</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">2</td>
-                                    <td class="p-4 text-center">28.5%</td>
+                                    <td class="p-4 font-bold text-slate-900">Marco Antonio Castro</td>
+                                    <td class="p-4 text-center">14</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">11</td>
+                                    <td class="p-4 text-center font-bold text-emerald-600">78.5%</td>
                                     <td class="p-4 text-center font-bold text-emerald-600 text-sm">1</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full font-medium font-bold">Líder Comercial</span></td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full font-bold">Líder Absoluto</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
                                     <td class="p-4 font-semibold text-slate-900">Evelia Muñoz</td>
-                                    <td class="p-4 text-center">10</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">3</td>
-                                    <td class="p-4 text-center">30.0%</td>
+                                    <td class="p-4 text-center">13</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">5</td>
+                                    <td class="p-4 text-center">38.4%</td>
                                     <td class="p-4 text-center font-bold">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full font-medium">Mayor Tráfico</span></td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-amber-50 text-amber-600 rounded-full font-medium">1 Apartado en Trámite</span></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900">Marcela (Nuevo Ingreso)</td>
+                                    <td class="p-4 text-center">20</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">4</td>
+                                    <td class="p-4 text-center">20.0%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full font-medium">Mayor Carga Asignada</span></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900">Rafael (Nuevo Ingreso)</td>
+                                    <td class="p-4 text-center">4</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
+                                    <td class="p-4 text-center">25.0%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Activo</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
                                     <td class="p-4 font-semibold text-slate-900">Alex Koyoc</td>
-                                    <td class="p-4 text-center">12</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">3</td>
-                                    <td class="p-4 text-center">25.0%</td>
+                                    <td class="p-4 text-center">13</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">0</td>
+                                    <td class="p-4 text-center text-red-500">0.0%</td>
                                     <td class="p-4 text-center font-bold">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-red-50 text-red-600 rounded-full font-medium">Sin Visitas</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900">Ana María Flores</td>
-                                    <td class="p-4 text-center">7</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
-                                    <td class="p-4 text-center">14.2%</td>
+                                    <td class="p-4 font-semibold text-slate-900">Víctor Tavares</td>
+                                    <td class="p-4 text-center">3</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">0</td>
+                                    <td class="p-4 text-center">0.0%</td>
                                     <td class="p-4 text-center font-bold">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Sin Visitas</span></td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900">Marco Antonio Castro</td>
-                                    <td class="p-4 text-center">11</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
-                                    <td class="p-4 text-center">9.0%</td>
-                                    <td class="p-4 text-center font-bold">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Al día</span></td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-4 font-semibold text-slate-900">Francisco González</td>
+                                    <td class="p-4 font-semibold text-slate-900">Carlos</td>
                                     <td class="p-4 text-center">2</td>
-                                    <td class="p-4 text-center font-bold text-slate-800">1</td>
-                                    <td class="p-4 text-center">50.0%</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">0</td>
+                                    <td class="p-4 text-center">0.0%</td>
                                     <td class="p-4 text-center font-bold">0</td>
-                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-amber-50 text-amber-600 rounded-full font-medium">En Observación</span></td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Sin Visitas</span></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-4 font-semibold text-slate-900">Ana María / Francisco</td>
+                                    <td class="p-4 text-center">1 (Francisco)</td>
+                                    <td class="p-4 text-center font-bold text-slate-800">0</td>
+                                    <td class="p-4 text-center">0.0%</td>
+                                    <td class="p-4 text-center font-bold">0</td>
+                                    <td class="p-4 text-center"><span class="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full font-medium">Sin Carga</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
+                <!-- ========================================== -->
+                <!-- TAB: BITÁCORA DE VISITAS DEL PERIODO       -->
+                <!-- ========================================== -->
                 <div id="tab-pipeline" class="tab-content space-y-4">
                     <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900">Bitácora de Visitas de las Últimas 3 Semanas</h3>
-                            <p class="text-xs text-slate-500">Listado de los 11 registros capturados.</p>
+                            <h3 class="text-lg font-bold text-slate-900">Bitácora General de Visitas</h3>
+                            <p class="text-xs text-slate-500">Listado completo de los 20 registros capturados en el periodo.</p>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- 1 -->
                         <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
                             <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Carol García</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
+                                <span>Gaby Chávez</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
                             </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Ana María | 01/07/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Se le brinda información (Posible asesora externas)."</p>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 17/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Le gustó Toulouse pero por presupuesto prefiere Mónaco. Revisa INFONAVIT y opciones COFINAVIT."</p>
                         </div>
+                        <!-- 2 -->
                         <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
                             <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>María de Lourdes Delgado</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
+                                <span>Carmen Rodríguez (2da Visita)</span>
+                                <span class="text-[9px] bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded">Punto de Venta</span>
                             </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Evelia Muñoz | 27/06/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Se lleva información y pide llamada para dar respuesta."</p>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 20/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Segunda visita con su esposo. Revisan autorización BBVA para decidir entre 1 o 2 plantas."</p>
                         </div>
+                        <!-- 3 -->
                         <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
                             <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>María del Carmen NA</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
+                                <span>Claudia Camacho</span>
+                                <span class="text-[9px] bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded">Punto de Venta</span>
                             </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Evelia Muñoz | 01/07/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Le interesa Toulouse pero menciona que solo está visitando varios fraccionamientos."</p>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 20/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesada en la zona por cercanía de entregas. Enfocada en Mónaco 2P."</p>
                         </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                        <!-- 4 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1 border-l-4 border-l-amber-400">
                             <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Alejandro Córdova</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
-                            </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Evelia Muñoz | 04/07/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic font-medium text-slate-900">"Interesado en una Toulouse con Roof Garden."</p>
-                        </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
-                            <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Edson Muñoz</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
-                            </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Francisco González | 28/06/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Quedó de pasar nuevamente o mandar mensaje. Interesado en Mónaco."</p>
-                        </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
-                            <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Víctor Javier Ibarra</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
-                            </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Marco | 05/07/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Indeciso entre Toulouse sin Roof Garden o Mónaco de dos Plantas."</p>
-                        </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
-                            <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Alexis Calderón</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
-                            </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Alex | 25/06/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Está viendo opciones, se interesó por modelo Toulouse y se da seguimiento."</p>
-                        </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
-                            <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Jessica NA</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
-                            </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Víctor Tavares | 05/07/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesada en Casa Mónaco de dos Plantas."</p>
-                        </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
-                            <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Alonso Hernán</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
-                            </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Víctor Tavares | 27/06/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Agendó cita nuevamente para seguimiento en sitio."</p>
-                        </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
-                            <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Óscar Servín</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Lead Marketing</span>
-                            </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Alex | 28/06/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Acude a cita el día 28-06-26 y se da seguimiento de respuesta."</p>
-                        </div>
-                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
-                            <div class="flex justify-between text-xs font-bold text-slate-900">
-                                <span>Manuel Ruiz</span>
+                                <span>Israel Mata</span>
                                 <span class="text-[9px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">Redes Asesor</span>
                             </div>
-                            <p class="text-[11px] text-slate-500">Asesor: Alex | 20/06/2026</p>
-                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Está viendo opciones, en un mes dará aviso. Mostró fuerte interés por Toulouse."</p>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 20/07/2026</p>
+                            <p class="text-xs text-amber-700 bg-amber-50 p-2 rounded border border-amber-100 font-medium">"Sin Retroalimentación Capturada."</p>
+                        </div>
+                        <!-- 5 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1 border-l-4 border-l-red-400">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Efrén Aguiñaga</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 26/07/2026</p>
+                            <p class="text-xs text-red-600 bg-white p-2 rounded border border-slate-100 font-medium">"Desperfilado: Interesados en Mónaco 2P pero NO les agradó el proyecto de los Departamentos."</p>
+                        </div>
+                        <!-- 6 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Josué Navarro</span>
+                                <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">Cita Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marcela | 26/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesado en Mónaco 2P, en proceso de reflexión."</p>
+                        </div>
+                        <!-- 7 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>María Gutiérrez</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marcela | 26/07/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Atendida en visita. Revisa con su esposo para programar segunda cita."</p>
+                        </div>
+                        <!-- 8 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1 border-l-4 border-l-red-400">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Paulina NA</span>
+                                <span class="text-[9px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">Redes Asesor</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marcela | 26/07/2026</p>
+                            <p class="text-xs text-red-600 bg-white p-2 rounded border border-slate-100 font-medium">"Desperfilada: No le gusta el proyecto general, no interesada en compra."</p>
+                        </div>
+                        <!-- 9 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1 border-l-4 border-l-amber-400">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>María Fernanda Ramírez</span>
+                                <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">Cita Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marcela | 31/07/2026</p>
+                            <p class="text-xs text-amber-700 bg-amber-50 p-2 rounded border border-amber-100 font-medium">"Sin Retroalimentación Capturada."</p>
+                        </div>
+                        <!-- 10 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Óscar Navarro</span>
+                                <span class="text-[9px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">Redes Asesor</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia | 04/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesado en Mónaco 2P, revisando aprobación de crédito BanBajío."</p>
+                        </div>
+                        <!-- 11 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>César Usiel Nevárez</span>
+                                <span class="text-[9px] bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded">Punto de Venta</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 08/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesado en Mónaco. Agenda cita una vez concluida la Casa Muestra."</p>
+                        </div>
+                        <!-- 12 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>José Pablo Guevara</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 08/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesados en Mónaco 1P. Se envía información y se mantiene en seguimiento."</p>
+                        </div>
+                        <!-- 13 -->
+                        <div class="p-4 border border-emerald-200 bg-emerald-50/30 rounded-xl space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Nina Vera</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia | 09/08/2026</p>
+                            <p class="text-xs text-emerald-800 bg-white p-2 rounded border border-emerald-200 font-medium">"Se lleva referencia para realizar apartado. Pendiente definir ubicación exactas."</p>
+                        </div>
+                        <!-- 14 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Pris Herrera</span>
+                                <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">Cita Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Rafael | 09/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesada en comprar con crédito BBVA. Su crédito cuenta con vigencia de 3 meses."</p>
+                        </div>
+                        <!-- 15 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Sahara NA</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia | 09/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Interesada en Casa Muestra Marsella."</p>
+                        </div>
+                        <!-- 16 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Brenda Zacarías Vega</span>
+                                <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">Cita Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia | 15/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Le gusta Mónaco 2P. Evaluando opciones del mercado, pide contacto en 2 semanas."</p>
+                        </div>
+                        <!-- 17 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Blanca González</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 15/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"Cliente retomada. Interesados en Casa Mónaco de 1 Planta."</p>
+                        </div>
+                        <!-- 18 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1 border-l-4 border-l-red-400">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>Cristian NA</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded">Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Evelia | 15/08/2026</p>
+                            <p class="text-xs text-red-600 bg-white p-2 rounded border border-slate-100 font-medium">"Desperfilado: Vendedora de desarrollo externo (Arzua), solo recababa información."</p>
+                        </div>
+                        <!-- 19 -->
+                        <div class="p-4 border border-slate-100 rounded-xl bg-slate-50/50 space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span>DICA NA</span>
+                                <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">Cita Marketing</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Asesor: Marco | 15/08/2026</p>
+                            <p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-100 italic">"En seguimiento. Buscando mejores opciones de crédito hipotecario."</p>
+                        </div>
+                        <!-- 20 - VENTA -->
+                        <div class="p-4 border-2 border-emerald-500 bg-emerald-50 rounded-xl space-y-1">
+                            <div class="flex justify-between text-xs font-bold text-slate-900">
+                                <span class="text-emerald-800">Carmen Rodríguez (Cierre)</span>
+                                <span class="text-[9px] bg-emerald-600 text-white font-bold px-2 py-0.5 rounded uppercase">VENTA CERRADA</span>
+                            </div>
+                            <p class="text-[11px] text-slate-600">Asesor: <strong>Marco Antonio Castro</strong> | 03/08/2026</p>
+                            <p class="text-xs text-emerald-900 bg-white p-2 rounded border border-emerald-200 font-bold">"Segunda visita. Realiza APARTADO MÓNACÓ 2P MZ06 LT 19."</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- ========================================== -->
+                <!-- TAB: LEADS CALIENTES HISTÓRICOS           -->
+                <!-- ========================================== -->
                 <div id="tab-calientes" class="tab-content space-y-4">
                     <div class="border-b border-slate-100 pb-3">
                         <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
                             <i class="fa-solid fa-fire text-amber-500"></i>
-                            Concentrado de Leads Calientes Activos (Abril - Mayo - Junio/Julio)
+                            Concentrado de Leads Calientes Activos (Julio / Agosto)
                         </h3>
-                        <p class="text-xs text-slate-500">Prospectos que ya asistieron al desarrollo y reflejan clara intención de compra o retroalimentación altamente positiva.</p>
+                        <p class="text-xs text-slate-500">Prospectos que han demostrado intención de compra avanzada o trámites de crédito en marcha.</p>
                     </div>
 
                     <div class="space-y-3">
-                        <div class="p-3 border border-amber-200 bg-amber-50/30 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <!-- Cierre reciente -->
+                        <div class="p-3 border-2 border-emerald-400 bg-emerald-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded mr-2">Junio / Julio</span>
-                                <strong class="text-slate-900 text-xs">Alejandro Córdova</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
-                                <p class="text-xs text-slate-600 mt-1 italic">"Interesado de forma directa en el modelo Toulouse con Roof Garden."</p>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-emerald-600 text-white px-2 py-0.5 rounded mr-2">VENTA REGISTRADA</span>
+                                <strong class="text-slate-900 text-xs">Carmen Rodríguez</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
+                                <p class="text-xs text-slate-700 mt-1 font-semibold">"Apartado concretado: Mónaco 2P Mz 06 Lt 19."</p>
                             </div>
-                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">Alta Prioridad</span>
+                            <span class="text-[10px] font-bold text-emerald-700 bg-white px-2 py-1 rounded border border-emerald-300">CERRADO</span>
                         </div>
 
-                        <div class="p-3 border border-amber-200 bg-amber-50/30 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <!-- Cierre pendiente inmediato -->
+                        <div class="p-3 border-2 border-amber-300 bg-amber-50/50 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded mr-2">Junio / Julio</span>
-                                <strong class="text-slate-900 text-xs">Víctor Javier Ibarra</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
-                                <p class="text-xs text-slate-600 mt-1 italic">"Decidiendo entre Toulouse sin Roof Garden o Mónaco 2 Plantas."</p>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-amber-200 text-amber-900 px-2 py-0.5 rounded mr-2">APARTADO EN TRÁMITE</span>
+                                <strong class="text-slate-900 text-xs">Nina Vera</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Se llevó referencia de pago para realizar apartado. Pendiente definir ubicación."</p>
                             </div>
-                            <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-200">En Cierre</span>
+                            <span class="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-1 rounded border border-amber-300">URGENTE</span>
                         </div>
 
-                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <!-- En proceso bancario -->
+                        <div class="p-3 border border-slate-200 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Mayo</span>
-                                <strong class="text-slate-900 text-xs">Martín Colchado</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
-                                <p class="text-xs text-slate-600 mt-1 italic">"Revisa información técnica de financiamiento para toma de decisión."</p>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Julio / Agosto</span>
+                                <strong class="text-slate-900 text-xs">Pris Herrera</strong> <span class="text-xs text-slate-500">(Asesor: Rafael)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Crédito BBVA autorizado con 3 meses de vigencia."</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
+                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">Aprobado</span>
                         </div>
 
-                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <div class="p-3 border border-slate-200 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Mayo</span>
-                                <strong class="text-slate-900 text-xs font-medium">Irlanda Idania Aguilar</strong> <span class="text-xs text-slate-500">(Asesor: Alex)</span>
-                                <p class="text-xs text-slate-600 mt-1 italic">"Interesada en modelo Mónaco 1 Planta, evaluando propuesta de enganche."</p>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Julio / Agosto</span>
+                                <strong class="text-slate-900 text-xs">Óscar Navarro</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Interesado en Mónaco 2P, revisando crédito con BanBajío."</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
+                            <span class="text-[10px] font-bold text-slate-600 bg-white px-2 py-1 rounded border border-slate-200">En Trámite</span>
                         </div>
 
-                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <div class="p-3 border border-slate-200 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Abril</span>
-                                <strong class="text-slate-900 text-xs">Alan Chávez</strong> <span class="text-xs text-slate-500">(Asesor: Evelia)</span>
-                                <p class="text-xs text-slate-600 mt-1 italic">"Interesado en Mónaco 2P con crédito Cofinavit, revisando flujo para apartado."</p>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Julio / Agosto</span>
+                                <strong class="text-slate-900 text-xs">Gaby Chávez</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Evaluando opción COFINAVIT / INFONAVIT para Casa Mónaco."</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
+                            <span class="text-[10px] font-bold text-slate-600 bg-white px-2 py-1 rounded border border-slate-200">Precalificando</span>
                         </div>
 
-                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <div class="p-3 border border-slate-200 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                             <div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Abril</span>
-                                <strong class="text-slate-900 text-xs">Lupita Capulín</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
-                                <p class="text-xs text-slate-600 mt-1 italic">"Interesada en Mónaco 2P, solicitó corrida y cotización formal para Caja Popular."</p>
+                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Julio / Agosto</span>
+                                <strong class="text-slate-900 text-xs">Blanca González</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
+                                <p class="text-xs text-slate-600 mt-1 italic">"Cliente retomada. Reinteresada en Casa Mónaco de 1 Planta."</p>
                             </div>
-                            <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">Seguimiento</span>
-                        </div>
-
-                        <div class="p-3 border border-slate-100 bg-slate-50/60 rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
-                            <div>
-                                <span class="text-[10px] uppercase font-bold tracking-wider bg-slate-200 text-slate-700 px-2 py-0.5 rounded mr-2">Abril</span>
-                                <strong class="text-slate-900 text-xs">Francisco Javier Cornejo</strong> <span class="text-xs text-slate-500">(Asesor: Marco)</span>
-                                <p class="text-xs text-slate-600 mt-1 italic">"Muy interesado en Mónaco con promesa de apartado; requiere validación de referencia."</p>
-                            </div>
-                            <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-200">Reactivar</span>
+                            <span class="text-[10px] font-bold text-slate-600 bg-white px-2 py-1 rounded border border-slate-200">Retomada</span>
                         </div>
                     </div>
                 </div>
 
             </div>
 
+            <!-- Custom Sheet Footer Concept -->
             <footer class="mt-12 pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-400 gap-2">
                 <div>Documento Corporativo de Distribución Interna - Dirección General.</div>
                 <div class="font-bold text-slate-700">Torrento Residencial S.A. de C.V.</div>
@@ -437,6 +580,7 @@
         </div>
     </main>
 
+    <!-- JS Logic Switcher -->
     <script>
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
